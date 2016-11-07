@@ -1,2 +1,2 @@
 # PopularQuestions
-This repo contains opular questions for a typical coding interview.
+This repo contains popular questions for a typical coding interview.
