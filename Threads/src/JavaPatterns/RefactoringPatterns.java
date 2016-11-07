@@ -1,4 +1,4 @@
-package PopularInProb;
+package JavaPatterns;
 
 import java.util.Arrays;
 import java.util.Collections;
