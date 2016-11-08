@@ -49,12 +49,3 @@ public class LinkedListLoopDemo {
 		return fastRunner;
 	}
 }
-
-class Node {
-	Node next;
-	int data;
-
-	public Node(int d) {
-		this.data = d;
-	}
-}
