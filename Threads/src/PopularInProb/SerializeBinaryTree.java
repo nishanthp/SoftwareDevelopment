@@ -36,6 +36,7 @@ public class SerializeBinaryTree {
 	}
 
 	public BinaryNode deserializeBinaryTree(String data) {
+		
 		String[] input = data.split(",");
 		return deserialize(input, 0);
 	}
