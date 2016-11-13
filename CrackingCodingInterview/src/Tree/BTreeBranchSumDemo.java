@@ -32,7 +32,9 @@ public class BTreeBranchSumDemo {
 
 	}
 
-	// Having level is the tricky part for replacing the elements and using an array instead of an arrayList.
+	/* Having level is the tricky part for replacing the elements and using an
+	 array instead of an arrayList as the arraylist will not replace the
+	 elements at a particular index.*/
 	private void findSum(Node root, int sum, int level, int[] sumPath) {
 		if (root == null) {
 			return;
