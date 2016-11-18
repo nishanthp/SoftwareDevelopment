@@ -7,14 +7,15 @@ public class SwapLinkedListPairWiseDemo {
 		Node h2 = new Node(3);
 		Node h3 = new Node(4);
 		Node h4 = new Node(5);
-		// Node h5 = new Node(6);
+		Node h5 = new Node(6);
 		h.next = h1;
 		h1.next = h2;
 		h2.next = h3;
 		h3.next = h4;
-		// h4.next = h5;
+		h4.next = h5;
 		SwapLinkedListPairWiseDemo demo = new SwapLinkedListPairWiseDemo();
-		Node head = demo.swapPairWise(h);
+		// Node head = demo.swapPairWise(h);
+		Node head = demo.swapPairWiseData(h);
 
 		// print
 		while (head != null) {
@@ -48,6 +49,18 @@ public class SwapLinkedListPairWiseDemo {
 		if (future == null) {
 			next.next = current;
 			current.next = null;
+		}
+		return head;
+	}
+
+	// swap by swapping the data between nodes.
+	public Node swapPairWiseData(Node head) {
+		Node current = head;
+		while (current != null && current.next != null) {
+			int temp = current.next.data;
+			current.next.data = current.data;
+			current.data = temp;
+			current = current.next.next;
 		}
 		return head;
 	}
