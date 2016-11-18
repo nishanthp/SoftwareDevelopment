@@ -26,7 +26,6 @@ public class ShortURLDemo {
 		while (id != 0) {
 			str.append(map[id % 62]);
 			id = id / 62;
-
 		}
 		return new String(str);
 	}
