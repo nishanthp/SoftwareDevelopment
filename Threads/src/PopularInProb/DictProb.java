@@ -45,8 +45,11 @@ public class DictProb {
 
 	/**
 	 * This is better the previous one.
-	 * @param input in the form of char array.
-	 * @param low starting index of a potential word.
+	 * 
+	 * @param input
+	 *            in the form of char array.
+	 * @param low
+	 *            starting index of a potential word.
 	 * @return dict words broken down in the string.
 	 */
 	public static String wordBreak(char[] input, int low) {

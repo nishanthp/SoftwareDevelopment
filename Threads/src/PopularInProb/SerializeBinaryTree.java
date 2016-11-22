@@ -1,7 +1,15 @@
 package PopularInProb;
 
-import java.nio.Buffer;
+import java.util.Arrays;
+import java.util.Deque;
+import java.util.LinkedList;
 
+/**
+ * Pre order serialization and deserialization.
+ * 
+ * @author prakasni
+ *
+ */
 public class SerializeBinaryTree {
 	static StringBuffer buffer = new StringBuffer();
 
@@ -19,36 +27,36 @@ public class SerializeBinaryTree {
 		sbt.serializeBinaryTree(root);
 		String serializeTree = new String(buffer);
 		String newString = serializeTree.substring(0, serializeTree.length() - 1);
-		System.out.println(new String(buffer));
 		System.out.println(newString);
 		BinaryNode newRoot = sbt.deserializeBinaryTree(newString);
-		System.out.println(newRoot.right.right.dat);
+		System.out.println(newRoot.right.dat);
 	}
 
 	public void serializeBinaryTree(BinaryNode root) {
 		if (root == null) {
+			buffer.append("null,");
 			return;
 		}
-		buffer.append(root.dat);
-		buffer.append(",");
+		buffer.append(root.dat + ",");
 		serializeBinaryTree(root.left);
 		serializeBinaryTree(root.right);
 	}
 
 	public BinaryNode deserializeBinaryTree(String data) {
-		
-		String[] input = data.split(",");
-		return deserialize(input, 0);
+		java.util.Deque nodes = new LinkedList<>();
+		nodes.addAll(Arrays.asList(data.split(",")));
+		return deserialize(nodes, 0);
 	}
 
-	private BinaryNode deserialize(String[] input, int i) {
-		if (i > input.length - 1) {
+	private BinaryNode deserialize(Deque nodes, int i) {
+		Object data = nodes.removeFirst();
+		if (data.equals("null")) {
 			return null;
 		}
-		int val = Integer.parseInt(input[i]);
+		int val = Integer.parseInt((String) data);
 		BinaryNode root = new BinaryNode(val);
-		root.left = deserialize(input, ++i);
-		root.right = deserialize(input, ++i);
+		root.left = deserialize(nodes, ++i);
+		root.right = deserialize(nodes, ++i);
 		return root;
 	}
 }
