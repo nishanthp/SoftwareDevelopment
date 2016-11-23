@@ -3,7 +3,9 @@ package JavaPatterns;
 import java.util.ArrayList;
 
 /**
- * Each action in this pattern is encapsulated within an object, thereby making each object a command.
+ * Each action in this pattern is encapsulated within an object, thereby making
+ * each object a command.
+ * 
  * @author prakasni
  *
  */
