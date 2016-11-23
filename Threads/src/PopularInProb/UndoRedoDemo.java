@@ -6,9 +6,8 @@ public class UndoRedoDemo {
 	static String input = "abcd";
 
 	public static void main(String[] args) {
-		Char c = new Char('d', 3);
-		UndoCommand undoCommand = new UndoCommand(input, c);
-		RedoCommand redoCommand = new RedoCommand(input, c);
+		UndoCommand undoCommand = new UndoCommand(input, 'd');
+		RedoCommand redoCommand = new RedoCommand(input, 'd');
 		BrokerUndoRedo undoRedo = new BrokerUndoRedo();
 		undoRedo.type(input);
 		undoRedo.undo(undoCommand);
@@ -23,7 +22,7 @@ class BrokerUndoRedo {
 	public void type(String input) {
 		int i = 0;
 		for (char eachChar : input.toCharArray()) {
-			undoStack.push(new UndoCommand(input, new Char(eachChar, i++)));
+			undoStack.push(new UndoCommand(input, eachChar));
 		}
 	}
 
@@ -55,9 +54,9 @@ interface Command {
 
 class UndoCommand implements Command {
 	public String inputString;
-	public Char c;
+	public char c;
 
-	public UndoCommand(String inputString, Char input) {
+	public UndoCommand(String inputString, char input) {
 		this.inputString = inputString;
 		this.c = input;
 	}
@@ -65,21 +64,22 @@ class UndoCommand implements Command {
 	@Override
 	public void execute() {
 		char[] temp = inputString.toCharArray();
-		char[] result = new char[temp.length];
+		char[] result = new char[temp.length-1];
 		for (int i = 0; i < temp.length; i++) {
-			if (temp[i] != this.c.c) {
+			if (temp[i] != this.c) {
 				result[i] = temp[i];
 			}
 		}
-		System.out.println(new String(result));
+		this.inputString = new String(result);
+		System.out.println(this.inputString);
 	}
 }
 
 class RedoCommand implements Command {
 	public String inputString;
-	public Char c;
+	public char c;
 
-	public RedoCommand(String inputString, Char input) {
+	public RedoCommand(String inputString, char input) {
 		this.inputString = inputString;
 		this.c = input;
 	}
@@ -87,27 +87,20 @@ class RedoCommand implements Command {
 	@Override
 	public void execute() {
 		char[] temp = inputString.toCharArray();
-		char[] result = new char[temp.length];
-		int j = 0;
+		char[] result = new char[temp.length + 1];
+		int j = temp.length;
 		for (int i = 0; i < temp.length; i++) {
-			if (temp[j] == this.c.pos) {
-				result[i] = this.c.c;
-			} else {
-				result[j] = temp[j];
-				j++;
-			}
+			result[i] = temp[i];
 		}
-		System.out.println(new String(result));
+		result[j] = this.c;
+		this.inputString = new String(result);
+		System.out.println(this.inputString);
 
 	}
 }
 
-class Char {
-	char c;
-	int pos;
-
-	Char(char c, int position) {
-		this.c = c;
-		this.pos = position;
-	}
-}
+/*
+ * class Char { char c; int pos;
+ * 
+ * Char(char c, int position) { this.c = c; this.pos = position; } }
+ */
