@@ -31,7 +31,7 @@ class FindAllOccurances {
 	public void findStartingIndex() throws IOException {
 		try (FileReader file = new FileReader(this.filePath); BufferedReader inputStream = new BufferedReader(file)) {
 			String line;
-			Pattern p = Pattern.compile("geeks", Pattern.CASE_INSENSITIVE);
+			Pattern p = Pattern.compile(this.pattern, Pattern.CASE_INSENSITIVE);
 			while ((line = inputStream.readLine()) != null) {
 				Matcher matcher = p.matcher(line);
 				while (matcher.find()) {
