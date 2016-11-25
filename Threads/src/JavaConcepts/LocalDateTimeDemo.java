@@ -62,5 +62,12 @@ public class LocalDateTimeDemo {
 		// or
 		LocalDateTime dateTime = d2.toLocalDateTime();
 		System.out.println(dateTime.getDayOfMonth());
+
+		// Another way of getting local date.
+		LocalDate t1 = LocalDate.now(ZoneId.systemDefault());
+		System.out.println("I KNOW" + t1.getDayOfMonth());
+
+		java.time.LocalTime t3 = java.time.LocalTime.now();
+		System.out.println("This is min." + t3.getMinute());
 	}
 }
