@@ -19,10 +19,10 @@ public class HashMapComparatorDemo implements Comparator<Integer> {
 
 	public static void main(String[] args) {
 		HashMapComparatorDemo hcd = new HashMapComparatorDemo(new TreeMap<Integer, Integer>());
-		map.put(1, 10);
-		map.put(2, 9);
+		map.put(2, 10);
+		map.put(3, 9);
 		map.put(4, 8);
-		map.put(3, 4);
+		map.put(1, 4);
 		map.put(7, 6);
 		map.put(5, 5);
 		TreeMap<Integer, Integer> soretedMap = new TreeMap<>(hcd);
