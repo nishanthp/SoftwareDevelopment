@@ -3,10 +3,10 @@
  */
 package practise;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
-
 
 /**
  * TODO Administrator (May 9, 2016) - Insert a description of this type.
@@ -15,43 +15,53 @@ import java.util.LinkedList;
  */
 public class BucketSort {
 
-    String[] bucketSort(final String[] a) {
-        int i = 0;
-        final HashMap<String, LinkedList<String>> sortedStrings = new HashMap<String, LinkedList<String>>();
+	public static void main(String[] args) {
+		int input[] = { 7, 6, 5, 4, 3, 21 };
+		BucketSort sort = new BucketSort();
+		for (int i : sort.sort(input)) {
+			System.out.println(i);
+		}
+	}
 
-        for (final String oneString : a) {
-            final String s = charArray(oneString);
-            if (!sortedStrings.containsKey(s)) {
-                final LinkedList<String> toAdd = new LinkedList<String>();
-                toAdd.push(oneString);
-                sortedStrings.put(s, toAdd);
-            } else {
-                final LinkedList<String> key = sortedStrings.get(s);
-                key.push(oneString);
-            }
-        }
+	public int[] sort(int[] input) {
+		int[] results = new int[input.length];
+		final int bucket_size = 5;
+		ArrayList<ArrayList<Integer>> buckets = new ArrayList<ArrayList<Integer>>();
 
-        for (final String oneSet : sortedStrings.keySet()) {
-            final LinkedList<String> list = sortedStrings.get(oneSet);
-            for (final String oneList : list) {
-                a[i] = oneList;
-                i++;
-            }
+		// find min and max of the input array.
 
-        }
-        return a;
-    }
+		int minValue = Integer.MAX_VALUE;
+		int maxValue = Integer.MIN_VALUE;
 
-    /**
-     * TODO Administrator (May 9, 2016) - Insert a description of what this method does.
-     *
-     * @param oneString
-     */
-    private String charArray(final String oneString) {
-        final char[] b = oneString.toCharArray();
-        Arrays.sort(b);
+		for (int i = 0; i < input.length; i++) {
+			maxValue = Math.max(maxValue, input[i]);
+			minValue = Math.min(minValue, input[i]);
+		}
 
-        return b.toString();
+		int bucketCount = (maxValue - minValue) / bucket_size + 1;
 
-    }
+		// initialization.
+		for (int i = 0; i <= bucketCount; i++) {
+			buckets.add(new ArrayList<Integer>());
+		}
+
+		// fill the buckets.
+		for (int eachEntry : input) {
+			buckets.get((eachEntry - minValue) / bucket_size).add(eachEntry);
+		}
+
+		int currentIndex = 0;
+		for (ArrayList<Integer> eachBucket : buckets) {
+			Integer[] temp = new Integer[eachBucket.size()];
+			temp = eachBucket.toArray(temp);
+			Arrays.sort(temp);
+
+			for (int i = 0; i < temp.length; i++) {
+				results[currentIndex++] = temp[i];
+			}
+
+		}
+		return results;
+	}
+
 }

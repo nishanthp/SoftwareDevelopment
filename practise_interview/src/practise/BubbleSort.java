@@ -25,15 +25,13 @@ public class BubbleSort {
 	public void sort(int[] input) {
 		swap = Boolean.TRUE;
 		while (swap) {
-			for (int i = 0; i < input.length; i++) {
-				for (int j = i + 1; j < input.length; j++) {
-					if (input[i] > input[j]) {
-						swap(i, j);
-						swap = Boolean.TRUE;
-					}
-				}
-			}
 			swap = Boolean.FALSE;
+			for (int j = 0; j < input.length - 1; j++) {
+				if (input[j + 1] < input[j]) {
+					swap(j + 1, j);
+					swap = Boolean.TRUE;
+				} 
+			}
 		}
 	}
 
