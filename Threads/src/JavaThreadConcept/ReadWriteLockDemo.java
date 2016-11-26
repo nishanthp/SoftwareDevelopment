@@ -1,4 +1,5 @@
 package JavaThreadConcept;
+
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.concurrent.locks.Lock;
@@ -9,13 +10,13 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock;
 public class ReadWriteLockDemo {
 	public static void main(String[] args) throws InterruptedException {
 		TreadSafeArray array = new TreadSafeArray();
-		Thread tw = new Thread(new ThreadWrite(array));
+		Thread tw = new ThreadWrite(array);
 		tw.start();
 
-		Thread tr1 = new Thread(new ThreadRead(array));
+		Thread tr1 = new ThreadRead(array);
 		tr1.start();
 
-		Thread tr2 = new Thread(new ThreadRead(array));
+		Thread tr2 = new ThreadRead(array);
 		tr2.start();
 
 	}

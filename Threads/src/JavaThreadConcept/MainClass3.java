@@ -1,10 +1,12 @@
 package JavaThreadConcept;
+
 import java.lang.reflect.GenericArrayType;
 
 public class MainClass3 {
 	public static void main(String[] args) {
 		ThreadGroup g = new ThreadGroup("NewThread");
 		thread1 t1 = new thread1(g, "MyThread");
+		boolean interrupt = t1.isInterrupted();
 		thread1.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
 
 			@Override

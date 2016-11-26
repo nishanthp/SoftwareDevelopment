@@ -4,6 +4,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 
+/**
+ * This would work you we support only one config at a time.
+ * 
+ * @author prakasni
+ *
+ */
 public class RefactoringPatterns {
 	static HashMap<CONFIG, Handler> map = new HashMap<>();
 
