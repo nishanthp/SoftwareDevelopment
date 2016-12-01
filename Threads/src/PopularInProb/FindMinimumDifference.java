@@ -28,8 +28,9 @@ public class FindMinimumDifference {
 					minDiff = difference;
 				}
 			}
-			findMinimumDiff(input, index + 1);
 		}
+		findMinimumDiff(input, index + 1);
+
 	}
 }
 

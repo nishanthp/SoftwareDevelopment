@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class FileOperations {
 	public static void main(String[] args) {
-		String cDrive = "C:" + "\\" + "pract";
+		String cDrive = "C:" + File.pathSeparator + "pract" + File.pathSeparator + "tes.txt";
 		File hpeidmapd = new File(cDrive);
 		try {
 			boolean diit = hpeidmapd.createNewFile();

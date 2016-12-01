@@ -30,14 +30,9 @@ public class MinVauleInStackDemo {
 
 	public void push(int data) {
 		Stacknode temp;
-		if (data < minimumValue) {
-			minimumValue = data;
-			temp = new Stacknode(data);
-			temp.setMinValueSoFar(minimumValue);
-		} else {
-			temp = new Stacknode(data);
-			temp.setMinValueSoFar(minimumValue);
-		}
+		minimumValue = Math.min(minimumValue, data);
+		temp = new Stacknode(data);
+		temp.setMinValueSoFar(minimumValue);
 		stack.push(temp);
 	}
 

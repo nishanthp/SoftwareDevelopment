@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 public class HeapDemo {
-	ArrayList<Integer> heap = new ArrayList<>();
-
 	public static void main(String[] args) {
 		Heap heap = new Heap(new ArrayList<Integer>());
 		heap.insert(15);

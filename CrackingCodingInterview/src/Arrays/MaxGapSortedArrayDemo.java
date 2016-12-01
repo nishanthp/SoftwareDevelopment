@@ -32,13 +32,12 @@ public class MaxGapSortedArrayDemo {
 		// sort into buckets.
 		for (int i = 0; i < input.length; i++) {
 			int index = (int) ((input[i] - minValue) * interval);
-			if (Buckets[index].low == -1) {
+			if (Buckets[index].low == -1 && Buckets[index].high == -1) {
 				Buckets[index].low = input[i];
 				Buckets[index].high = input[i];
 			} else {
-				int value = Buckets[index].low;
-				Buckets[index].low = Math.min(value, input[i]);
-				Buckets[index].high = Math.max(value, input[i]);
+				Buckets[index].low = Math.min(Buckets[index].low, input[i]);
+				Buckets[index].high = Math.max(Buckets[index].high, input[i]);
 			}
 		}
 

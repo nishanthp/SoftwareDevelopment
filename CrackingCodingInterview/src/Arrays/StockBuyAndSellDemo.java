@@ -15,7 +15,7 @@ public class StockBuyAndSellDemo {
 		profit = demo.BSAnyNumOfTrans(input1);
 		System.out.println(profit);
 
-		profit = demo.BSLimitedNumOfTrans(input1, 3);
+		profit = demo.BSLimitedNumOfTrans(prices, 3);
 		System.out.println(profit);
 	}
 
@@ -76,11 +76,11 @@ public class StockBuyAndSellDemo {
 		for (int i = 1; i < temp.length; i++) {
 			for (int j = 1; j < temp[0].length; j++) {
 				int maxValue = 0;
-				for (int m = 0; m <= j - 1; m++) {
-					maxValue = Math.max(input[i]-input[m] + temp[i - 1][m], maxValue);
+				for (int m = 0; m <= j-1 ; m++) {
+					maxValue = Math.max(input[j]-input[m] + temp[i - 1][m], maxValue);
 				}
-				maxValue = Math.max(temp[i][j - 1], maxValue);
-				temp[i][j] = maxValue;
+				temp[i][j] = Math.max(temp[i][j - 1], maxValue);
+				 
 			}
 		}
 		return temp[k][input.length - 1];

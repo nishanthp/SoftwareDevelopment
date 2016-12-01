@@ -31,12 +31,6 @@ public class Sorts {
 		 * System.out.println(n);
 		 */
 		/*
-		 * final SubSetProblem s = new SubSetProblem(); final int a[] = { 1, 2,
-		 * 3, 4, 5 }; final int actualSum = 6; System.out.println(s.subSet(a,
-		 * actualSum)); System.out.println(s.nonConti(a, actualSum, a.length));
-		 * System.out.println(s.nonConti1(a, actualSum, a.length));
-		 */
-		/*
 		 * final int a[] = { 5, 2, 3, 1, 6 }; final BubbleSort bs = new
 		 * BubbleSort(); bs.bubbleSort(a); for (final int each : a) {
 		 * System.out.println(each); }
@@ -48,15 +42,6 @@ public class Sorts {
 
 		final SubString s = new SubString();
 		// s.permutation("abc");
-		/*
-		 * final String a = "99"; final String res = s.addDigit(a,
-		 * a.charAt(a.length() - 1), a.length() - 1, 0);
-		 * System.out.println(res);
-		 */
-		/*
-		 * final int a[] = { -2, 1, -3, 4, -1, 2, 1, -5, 4 }; final int sum =
-		 * s.non_con_maxSubArray(a); System.out.println(sum);
-		 */
 
 		/*
 		 * final int input[][] = { { 2, 1, -3, -4, 5 }, { 0, 6, 3, 4, 1 }, { 2,
@@ -117,19 +102,8 @@ public class Sorts {
 		 * final int deno[] = { 1, 2, 3 }; final SolutionChanges s1 = new
 		 * SolutionChanges(); System.out.println(s1.numberofSolutions(deno, 5));
 		 */
-
 		/*
-		 * final String str = "agbdba"; final SubString palindrome = new
-		 * SubString();
-		 * System.out.println(s.longestCommonPalindrome(str.toCharArray(), 0,
-		 * 6)); final String s1 = "abcdaf"; final String s2 = "acbcf";
-		 * System.out.println(palindrome.lcs(s1.toCharArray(),
-		 * s2.toCharArray()));
-		 */
-		/*
-		 * final SubString s2 = new SubString(); final int a[] = { -2, 0, 1, 3
-		 * }; System.out.println(s2.threeSubSet(a, 2));
-		 * System.out.println(s2.doNotReverseSC("a,b$c")); final NQueenProblem
+		 *  final NQueenProblem
 		 * queen = new NQueenProblem(); for (final Positions p :
 		 * queen.queenNProblem(4)) { System.out.println("ROW:" + p.row + "COL:"
 		 * + p.col); }
@@ -211,10 +185,11 @@ public class Sorts {
 		 * final Double d = new Double(2.5); final byte byteq = d.byteValue();
 		 * System.out.println(byteq);
 		 */
-		/*
-		 * final int c[] = { 1, 2, 3, 4 }; final int val = 5;
-		 * System.out.println(countpairsn(c, val));
-		 */
+
+		final int c[] = { 1, 2, 3, 4 };
+		final int val = 5;
+		System.out.println(countpairsn(c, val));
+
 		/*
 		 * String s = null; final String time = "12:00:00AM"; if
 		 * (time.contains("P")) { s = time.substring(0, time.indexOf("PM")); }

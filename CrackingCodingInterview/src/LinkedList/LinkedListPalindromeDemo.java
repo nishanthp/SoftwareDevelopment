@@ -1,6 +1,7 @@
 package LinkedList;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class LinkedListPalindromeDemo {
 	ArrayList<String> data = new ArrayList<>();
@@ -17,7 +18,8 @@ public class LinkedListPalindromeDemo {
 		head3.next = head4;
 
 		LinkedListPalindromeDemo palindrome = new LinkedListPalindromeDemo();
-		palindrome.checkifPalindrome(head);
+		// palindrome.checkifPalindrome(head);
+		palindrome.checkifPalindromeStack(head);
 	}
 
 	public void checkifPalindrome(LNode head) {
@@ -41,6 +43,31 @@ public class LinkedListPalindromeDemo {
 				}
 				slowRunner = slowRunner.next;
 			}
+		}
+		System.out.println("It is a palindrome.");
+	}
+
+	public void checkifPalindromeStack(LNode head) {
+		LNode fastRunner = head;
+		LNode slowRunner = head;
+		Stack<LNode> stack = new Stack<>();
+		while (fastRunner != null && fastRunner.next != null) {
+			fastRunner = fastRunner.next.next;
+			stack.push(slowRunner);
+			slowRunner = slowRunner.next;
+		}
+
+		// skip the middle element if the number of elements are odd.
+		if (fastRunner != null) {
+			slowRunner = slowRunner.next;
+		}
+		while (slowRunner != null) {
+			if (!stack.pop().data.equals(slowRunner.data)) {
+				System.out.println("Not a Palindrome");
+				return;
+			}
+			slowRunner = slowRunner.next;
+
 		}
 		System.out.println("It is a palindrome.");
 	}

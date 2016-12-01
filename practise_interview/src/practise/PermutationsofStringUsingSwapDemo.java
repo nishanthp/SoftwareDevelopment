@@ -6,6 +6,7 @@ public class PermutationsofStringUsingSwapDemo {
 	public static void main(String[] args) {
 		PermutationsofStringUsingSwapDemo stringPermutations = new PermutationsofStringUsingSwapDemo();
 		stringPermutations.permutations(0, input.length() - 1);
+
 	}
 
 	private void permutations(int l, int r) {

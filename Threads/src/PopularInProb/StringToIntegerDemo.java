@@ -9,6 +9,8 @@ public class StringToIntegerDemo {
 			result += (number.charAt(i) - '0') * factor;
 			factor = factor * 10;
 		}
+
+		// result = Integer.parseInt("1234");
 		System.out.println(result);
 	}
 }

@@ -1,11 +1,13 @@
 package practise;
 
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
 public class HashMapComparatorDemo implements Comparator<Integer> {
 	static TreeMap<Integer, Integer> map = new TreeMap<>();
+	static HashMap<Integer, Integer> maph = new HashMap<>();
 
 	public HashMapComparatorDemo(TreeMap<Integer, Integer> reqMap) {
 		this.map = reqMap;
@@ -18,6 +20,7 @@ public class HashMapComparatorDemo implements Comparator<Integer> {
 	}
 
 	public static void main(String[] args) {
+
 		HashMapComparatorDemo hcd = new HashMapComparatorDemo(new TreeMap<Integer, Integer>());
 		map.put(2, 10);
 		map.put(3, 9);
@@ -30,6 +33,15 @@ public class HashMapComparatorDemo implements Comparator<Integer> {
 		for (Entry<Integer, Integer> entry : soretedMap.entrySet()) {
 			System.out.println("KEY:" + entry.getKey() + "VALUE:" + entry.getValue());
 
+		}
+
+		maph.put(11, 12);
+		maph.put(1, 12);
+		maph.put(10, 12);
+		TreeMap<Integer, Integer> HsoretedMap = new TreeMap<>();
+		HsoretedMap.putAll(maph);
+		for (Integer i : HsoretedMap.keySet()) {
+			System.out.println(i);
 		}
 
 	}

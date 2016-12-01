@@ -4,41 +4,41 @@ public class HashCodeEqualsOverride {
 	public static void main(String[] args) {
 		Configuration config_1 = new Configuration();
 		Configuration config_2 = new Configuration();
-		config_1.name = "hashcode";
-		config_2.name = "hashcode_1";
-		System.out.println(config_1.hashCode());
-		System.out.println(config_2.hashCode());
+		config_1.name = "xyz";
+		config_2.name = "abc";
+		config_1.number = 1234;
+		config_2.number = 1234;
 		if (config_1.equals(config_2)) {
-			System.out.println("Is this true");
+			System.out.println("They are equal");
 		}
+
 	}
 }
 
 class Configuration {
 	String name;
-	int number;
+	Integer number;
 
 	@Override
 	public int hashCode() {
-		return 1;
+		int prime = 31;
+
+		return prime * number.hashCode();
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Configuration other = (Configuration) obj;
-		if (name == null) {
-			if (other.name != null)
+		}
+		if (obj instanceof Configuration) {
+			Configuration new_name = (Configuration) obj;
+			if (new_name.number.equals(((Configuration) obj).number)) {
+				return true;
+			} else
 				return false;
-		} else if (!name.equals(other.name))
+
+		} else
 			return false;
-		if (number != other.number)
-			return false;
-		return true;
 	}
 }
