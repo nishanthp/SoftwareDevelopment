@@ -9,9 +9,9 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Calendar;
 import java.util.Date;
-import org.joda.time.*;
+/*import org.joda.time.*;
 import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.DateTimeFormatter;*/
 
 /**
  * Different in built classes to use for date and time.
@@ -38,8 +38,8 @@ public class LocalDateTimeDemo {
 
 		// 3rd Method. This seems to be a better option as the 1st option has
 		// deprecated methods.
-		DateTimeFormatter dtf = DateTimeFormat.forPattern("HH:mm");
-		LocalTime data = dtf.parseLocalTime(stringfromUser);
+		//DateTimeFormatter dtf = DateTimeFormat.forPattern("HH:mm");
+		//LocalTime data = dtf.parseLocalTime(stringfromUser);
 		// System.out.println(data.getHourOfDay());
 		// System.out.println(data.getMinuteOfHour());
 
