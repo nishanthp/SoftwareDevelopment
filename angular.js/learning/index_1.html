@@ -1,0 +1,17 @@
+<html ng-app="main_module">
+    <head>
+        <script src="angular.js"></script>
+        <script src="app_1.js"></script>  
+    </head>
+
+    <body>
+        // Controller as syntax to avoid confusion of scope hierarchy.
+        <div ng-controller="Ctrl1 as c1">
+            <p>{{c2.new_var}}</p>
+            <div ng-controller="Ctrl2 as c2">
+                <p>{{c2.new_var}}</p>
+            </div>
+        
+        </div>
+    </body>
+</html>

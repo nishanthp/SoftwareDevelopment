@@ -1,0 +1,16 @@
+<html ng-app="mainModel">
+    <head>
+        <script src="angular.js"></script>
+        <script src="moreDir.js"></script>
+    </head>
+
+    <body ng-controller="ctr_main">
+        <div ng-repeat="i in myList">
+            <p>
+                {{i.age}}
+                {{$index+1}}
+                <hr/>
+            </p>
+        </div>
+    </body>
+</html>

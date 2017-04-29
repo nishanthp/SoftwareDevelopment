@@ -1,0 +1,28 @@
+<html ng-app="main_module">
+    <head>
+        
+        <script src="angular.js"></script>
+        <script src="app.js"></script>  
+        <!--<title>Clock-App</title>-->
+        <h1>Clock-App</h1>      
+    </head>
+
+    <body ng-controller="MainCtrl">      
+        <p>The current time is: {{time}}</p>
+        <input ng-model="username" type="text"></input>
+        Please enter the date:<input ng-model="textstring" type="date"></input>
+        <p>The username you entered is: {{username}}</p>
+        <p>The date enetered is : {{textstring}}</p>
+        <button ng-click="update_time()">Update Time</button>
+
+
+        <p>
+            <input type="checkbox" ng-model="checkbox" ng-change="checkbox_changed()">This is a checkbox</input>
+            <p>{{checkbox}}</p>
+            <input type="radio" ng-model="radio_button" value="opt1" ng-change="radio_change()">This is a opt1</input>
+            <input type="radio" ng-model="radio_button" value="opt2" ng-change="radio_change()">This is a opt2</input>
+            <input type="radio" ng-model="radio_button" value="opt3" ng-change="radio_change()">This is a opt3</input>
+            <p>{{radio_button}}</p>
+        </p>
+    </body>
+</html>

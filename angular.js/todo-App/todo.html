@@ -1,0 +1,30 @@
+<html ng-app="main_todo">
+    <head>        
+        <script src="angular.js"></script>
+        <script src="todo.js"></script>  
+        <h1>Todo-App</h1>      
+    </head>
+
+    <body ng-controller="Main_ctrl as mc">     
+        <p>Add a Todo:</p>
+        <input type="text" ng-model="mc.input_text"></input>
+        <button ng-click="mc.append()">Add</button>
+
+        <p>Your Todos:</p>
+        <button ng-click="mc.button_name_change()">{{mc.button_name}}</button>
+
+        <div ng-repeat="i in mc.list_to_do">
+
+            <div ng-show="mc.button_name=='Edit'">               
+                {{$index+1}}. {{i}}
+                <button ng-click="mc.delete_element(i)">Delete</button>
+            </div>
+            
+            <div ng-show="mc.button_name=='Done'">
+                <input type="text" ng-model="(i)"></input>
+            </div>
+
+        </div>
+
+    </body>
+</html>
