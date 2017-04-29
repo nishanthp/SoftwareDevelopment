@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include header.ejs %>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><%= name %></p>
+    <h3><%= video_data.categoryName %></h3>
+    <% video_data.categories.forEach(function(item){ %>
+        <li><a href="https://thenewboston.com/videos_food.php?cat=<%= item.categoryID %>"><%= item.categoryName %></a></li>
+    <% }) %>
+    <ul> <% for (var i=0; i<5; i++) {%>
+    <li>i</li>
+    </ul>
+    <%}%>
+      </body>
+</html>

@@ -1,0 +1,105 @@
+<html ng-app="main_module">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="contacts.js"></script>
+    <script src="contacts.service.js"></script>
+    <script src="contacts.controller.js"></script>
+    <script src="contact.header_config.service.js"></script>
+    <script src="contact.footer_config.service.js"></script>
+    <script src="contact.header_footer.service.js"></script>
+    <script src="contact.header_controller.js"></script>
+    <script src="contact.footer_controller.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div>
+        <h1 ng-controller="hc as h">{{h.app_title}}</h1>
+    </div>
+    <div class="container-fluid" ng-controller="main_ctrl as mc">
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="contact in mc.all_contacts" ng-click="mc.selected_contact($index)">
+                        <span>{{contact.name.first + " " + contact.name.last}}</span>
+                </ul>
+                <button ng-click="mc.addUser()">Add</button>
+            </div>
+
+            <div class="col-md-6">
+                <div class="alert alert-success" ng-if="(mc.successMessage)">{{mc.successMessage}}</div>
+                <div class="alert alert-danger" ng-if="(mc.errorMessage)">{{mc.errorMessage}}</div>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img ng-src="{{mc.select_contact.picture.medium}}"></img>
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"></h4>
+                        <div>
+                            <p>
+                                <button ng-hide="mc.toggleEdit" ng-click="mc.toggleEditButton()">Edit</button>
+                                <button ng-show="mc.toggleEdit" ng-click="mc.toggleSaveButton()">Save</button>
+                            </p>
+
+                            <p>
+                                <span>First Name:</span>
+                                <span ng-hide="mc.toggleEdit">{{mc.select_contact.name.first}}</span>
+                                <input type="text" ng-show="mc.toggleEdit" ng-model="(mc.select_contact.name.first)"></input>
+
+                            </p>
+                            <p>
+                                <span>Last Name:</span>
+                                <span ng-hide="mc.toggleEdit">{{mc.select_contact.name.last}}</span>
+                                <input type="text" ng-show="mc.toggleEdit" ng-model="(mc.select_contact.name.last)"></input>
+                            </p>
+                        </div>
+                        <div>
+                            <h5>location:</h5>
+                            <p>
+                                <span>Street:</span>
+                                <span ng-hide="mc.toggleEdit">{{mc.select_contact.location.street}}</span>
+                                <input type="text" ng-show="mc.toggleEdit" ng-model="(mc.select_contact.location.street)"></input>
+
+                            </p>
+                            <p>
+                                <span>City:</span>
+                                <span ng-hide="mc.toggleEdit">{{mc.select_contact.location.city}}</span>
+                                <input type="text" ng-show="mc.toggleEdit" ng-model="(mc.select_contact.location.city)"></input>
+                            </p>
+                            <p>
+                                <span>State:</span>
+                                <span ng-hide="mc.toggleEdit">{{mc.select_contact.location.state}}</span>
+                                <input type="text" ng-show="mc.toggleEdit" ng-model="(mc.select_contact.location.state)"></input>
+                            </p>
+                            <p>
+                                <span>Postal Code:</span>
+                                <span ng-hide="mc.toggleEdit">{{mc.select_contact.location.postcode}}</span>
+                                <input type="text" ng-show="mc.toggleEdit" ng-model="(mc.select_contact.location.postcode)"></input>
+                            </p>
+                            <p>
+                                <span>Phone:</span>
+                                <span ng-hide="mc.toggleEdit">{{mc.select_contact.cell}}</span>
+                                <input type="text" ng-show="mc.toggleEdit" ng-model="(mc.select_contact.cell)"></input>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12" ng-controller="fc as f">
+        <p>{{f.app_title}}</p>
+    </div>
+</body>
+
+</html>

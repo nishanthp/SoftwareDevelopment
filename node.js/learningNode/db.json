@@ -1,0 +1,188 @@
+{
+  "contacts": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "mrs",
+        "first": "Naomi",
+        "last": "Harris"
+      },
+      "location": {
+        "street": "3078 Brockville Dr",
+        "city": "Roseville",
+        "state": "California",
+        "postcode": "95747"
+      },
+      "email": "naomi.harris@example.com",
+      "login": {
+        "username": "yellowpanda849",
+        "password": "hohoho",
+        "salt": "Q5LkoqRn",
+        "md5": "74771c5c7b620b8fe6a19d609b17d5fe",
+        "sha1": "c75a8297df49cbae9df3e67f7a785d24f5c9fb18",
+        "sha256": "56bfe822f2b1332da38d5cd76fbe273c3dfe8c178fde25d551be99017694a74a"
+      },
+      "dob": "1965-11-27 09:41:47",
+      "registered": "2004-05-23 09:42:27",
+      "phone": "(095)-807-0862",
+      "cell": "(293)-186-5264",
+      "id": 1,
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/28.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/28.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/28.jpg"
+      },
+      "nat": "NZ"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "miss",
+        "first": "Melodie",
+        "last": "Mackay"
+      },
+      "location": {
+        "street": "6827 simcoe st",
+        "city": "Sherbrooke",
+        "state": "New York",
+        "postcode": 37323
+      },
+      "email": "melodie.mackay@example.com",
+      "login": {
+        "username": "bigbear317",
+        "password": "heather1",
+        "salt": "qApWkJEW",
+        "md5": "0b20045b418fb0286a8bb7b518c2c43b",
+        "sha1": "99f8ff9f4a0689c2a59447d43a3b3edd07671032",
+        "sha256": "12075e53018516b8a9b4931ef142587a1a37ff49320dbc3ad5ee393ba61b3abb"
+      },
+      "dob": "1980-04-17 16:35:09",
+      "registered": "2009-01-23 06:26:33",
+      "phone": "453-208-2207",
+      "cell": "011-334-4989",
+      "id": 2,
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/57.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/57.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/57.jpg"
+      },
+      "nat": "CA"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "Milan",
+        "last": "Legrand"
+      },
+      "location": {
+        "street": "2477 rue de la gare",
+        "city": "Fort Collins",
+        "state": "CO",
+        "postcode": 62019
+      },
+      "email": "milan.legrand@example.com",
+      "login": {
+        "username": "orangeladybug155",
+        "password": "mylove",
+        "salt": "vvkljQWG",
+        "md5": "e9c0761b187b57a4ee901611126ac792",
+        "sha1": "4a72060f34fa96c482836f46505f12ed8907e91f",
+        "sha256": "77768b0639c176c527d62298fc881b44616d1e091aea41ac6159d4da0820ccff"
+      },
+      "dob": "1988-10-29 03:57:20",
+      "registered": "2003-08-01 03:13:29",
+      "phone": "05-00-35-11-79",
+      "cell": "06-91-34-13-53",
+      "id": 3,
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/33.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/33.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/33.jpg"
+      },
+      "nat": "FR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "Levi",
+        "last": "Thomas"
+      },
+      "location": {
+        "street": "7594 northcote road",
+        "city": "Hasting",
+        "state": "Florida",
+        "postcode": 38723
+      },
+      "email": "levi.thomas@example.com",
+      "login": {
+        "username": "redbear821",
+        "password": "vette",
+        "salt": "7DFKTZmk",
+        "md5": "cd6a84170e072e9576e0e43587b3c992",
+        "sha1": "b5ca9d3f83d2bc9d71ead6f4e9274219ef6bb650",
+        "sha256": "fb4c49fd1f90c1a7d8e65f43de061e08383272353d431824015ea6b65910c8ec"
+      },
+      "dob": "1962-06-01 08:19:20",
+      "registered": "2004-04-27 23:50:13",
+      "phone": "(436)-145-2471",
+      "cell": "(474)-259-5462",
+      "id": 4,
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/97.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/97.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/97.jpg"
+      },
+      "nat": "NZ"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "ms",
+        "first": "Jasmine",
+        "last": "Clarke"
+      },
+      "location": {
+        "street": "8212 dyers road",
+        "city": "Hamilton",
+        "state": "Arizona",
+        "postcode": "80525"
+      },
+      "email": "jasmine.clarke@example.com",
+      "login": {
+        "username": "bigbear261",
+        "password": "silence",
+        "salt": "vUX3GL5D",
+        "md5": "a654db89f74bb0e6e8f1079ebe6cdc84",
+        "sha1": "8e8790db95c5a3049c5524c649174de6cc034d78",
+        "sha256": "f7ff1181be188d528112d6003f521090dc3b610381d3c5764f7a547409af7d42"
+      },
+      "dob": "1983-04-13 07:22:03",
+      "registered": "2006-08-27 10:13:19",
+      "phone": "(733)-383-9468",
+      "cell": "(246)-105-6315",
+      "id": 5,
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/35.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/35.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/35.jpg"
+      },
+      "nat": "NZ"
+    },
+    {
+      "name": {
+        "first": "Nishanth",
+        "last": "Prakash"
+      },
+      "location": {
+        "street": "2212 Vermont Dr",
+        "city": "Fort Collins",
+        "state": "CO",
+        "postcode": "80525"
+      },
+      "cell": "520-265-7167",
+      "id": 6
+    }
+  ]
+}
