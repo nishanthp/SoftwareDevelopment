@@ -1,0 +1,24 @@
+<html ng-app="main1">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<head>"This is the angular config app."</head>
+
+<body>
+    <a href="#cal">cal</a>
+    <a href="#index">index</a>
+    <div class="ng-view"></div>
+    <script>
+        var app = angular.module("main1", ['ngRoute']);
+        app.config(function ($routeProvider) {
+            $routeProvider
+            .when('/cal', {
+                templateUrl: "./cal.html"
+            })
+                .when('/index', {
+                    templateUrl: "./index.html"
+                })
+        })
+    </script>
+</body>
+
+</html>

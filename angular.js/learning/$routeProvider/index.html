@@ -1,0 +1,32 @@
+<html ng-app="MainModule">
+    <head>
+        <script src="angular.js"></script>
+    </head>
+
+    <!--<body ng-init="hourOfDay=12">-->
+    <body>
+        <div ng-controller="MainCtrl">
+            <h1>Hello Angular!</h1>
+            <p ng-if="hourOfDay<12">Good Morning</p>
+            <p ng-if="hourOfDay>12">Good Evening</p>
+            <!--<p>The current hour of the day is: <span ng-bind="hourOfDay"></span></p>-->
+            <!--<p>The current time of the day  is: <span>{{hourOfDay}}</span></p>-->
+            <p>The current time of the day is: {{hourOfDay}}</p>
+            <p>Does expression <span>{{22/7}}</span></p>
+        </div> 
+        
+        
+        <script>
+            //console.log(angular);
+            //To call the main function, main function should be a part of a controller. This needs to be a part of module.
+            var module = angular.module("MainModule",[]);
+            module.controller("MainCtrl",Main);
+            
+            function Main($scope){
+                $scope.hourOfDay =14;
+                console.log("Main method is called...")
+            }
+        </script>
+
+    </body>
+</html>
