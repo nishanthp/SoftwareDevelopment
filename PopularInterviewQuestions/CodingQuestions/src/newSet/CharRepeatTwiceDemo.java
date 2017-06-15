@@ -19,8 +19,8 @@ public class CharRepeatTwiceDemo {
 		}
 
 		for (int i = 0; i < 256; i++) {
-			if(charFreq[i]>0){
-			queue.add(new CharFreq((char) i, charFreq[i]));
+			if (charFreq[i] > 0) {
+				queue.add(new CharFreq((char) i, charFreq[i]));
 			}
 		}
 		while (!queue.isEmpty()) {
