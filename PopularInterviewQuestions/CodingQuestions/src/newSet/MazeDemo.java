@@ -2,6 +2,7 @@ package newSet;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+
 // This is without the 2D array.
 public class MazeDemo {
 	public static void main(String[] args) {
