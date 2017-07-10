@@ -4,7 +4,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class MinEdgesBetVerticesDemo {
-	static int count = Integer.MAX_VALUE;
 
 	public static void main(String[] args) {
 		GraphNode n1 = new GraphNode(0);
@@ -39,31 +38,33 @@ public class MinEdgesBetVerticesDemo {
 		n6.addNeightbors(n5);
 		n6.addNeightbors(n3);
 		MinEdgesBetVerticesDemo d = new MinEdgesBetVerticesDemo();
-		d.BFS(n2, n6);
-		System.out.println(count);
+		int[] distances = new int[7];
+		System.out.println(d.BFS(n2, n6, distances));
 	}
 
-	public void BFS(GraphNode source, GraphNode dest) {
-		int currentCount = 0;
+	public int BFS(GraphNode source, GraphNode dest, int[] distances) {
 		Queue<GraphNode> queue = new LinkedList<>();
 		queue.add(source);
 		source.isVisited = true;
 		while (!queue.isEmpty()) {
-			for (GraphNode eachNeigbor : queue.poll().getNeighbors()) {
-				if (!eachNeigbor.isVisited) {
-					System.out.println(eachNeigbor.data);
-					queue.add(eachNeigbor);
-					eachNeigbor.isVisited = true;
-					currentCount += 1;
-					if (eachNeigbor.data == dest.data) {
-						if (currentCount < count) {
-							count = currentCount;
-						}
-						currentCount = 0;
+			GraphNode head = queue.remove();
+			for (GraphNode eachNeighbor : head.getNeighbors()) {
+				if (!eachNeighbor.isVisited) {
+					queue.add(eachNeighbor);
+					eachNeighbor.isVisited = true;
+					int currentData = distances[eachNeighbor.data];
+					currentData += distances[head.data] + 1;
+					if(distances[eachNeighbor.data]!=0) {
+					distances[eachNeighbor.data] = Math.min(distances[eachNeighbor.data], currentData);
+					}else {
+						distances[eachNeighbor.data] = currentData;
+					}
+					if (eachNeighbor.data == dest.data) {
+						eachNeighbor.isVisited = false;
 					}
 				}
 			}
 		}
-
+		return distances[dest.data];
 	}
 }
