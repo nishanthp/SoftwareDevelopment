@@ -1,6 +1,6 @@
 package Arrays;
 
-public class FindPalindromeConstantSizeDemo {
+public class FindPalindromeInPlaceDemo {
 	public static void main(String[] args) {
 		String input = "abccba";
 		findWhetherPalindrome(input);
