@@ -54,9 +54,9 @@ public class MinEdgesBetVerticesDemo {
 					eachNeighbor.isVisited = true;
 					int currentData = distances[eachNeighbor.data];
 					currentData += distances[head.data] + 1;
-					if(distances[eachNeighbor.data]!=0) {
-					distances[eachNeighbor.data] = Math.min(distances[eachNeighbor.data], currentData);
-					}else {
+					if (distances[eachNeighbor.data] != 0) {
+						distances[eachNeighbor.data] = Math.min(distances[eachNeighbor.data], currentData);
+					} else {
 						distances[eachNeighbor.data] = currentData;
 					}
 					if (eachNeighbor.data == dest.data) {
