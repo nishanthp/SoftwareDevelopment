@@ -15,9 +15,11 @@ public class EncryptDecryptDemo {
 			array[i] = (int) c;
 			int temp = array[i] - subtractFactor;
 
-			while (temp < 'a') {
-				temp += 26;
+			if (temp < 'a') {
+				int dividend = array[i] / 26;
+				temp = (26 * dividend) + temp;
 			}
+
 			subtractFactor = array[i];
 			s.append((char) temp);
 			i++;
