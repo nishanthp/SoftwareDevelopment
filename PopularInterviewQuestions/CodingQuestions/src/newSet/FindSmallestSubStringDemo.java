@@ -1,5 +1,6 @@
 package newSet;
 
+// In constant space.
 public class FindSmallestSubStringDemo {
 	public static void main(String[] args) {
 		char[] arr = { 'x', 'y', 'y' };
