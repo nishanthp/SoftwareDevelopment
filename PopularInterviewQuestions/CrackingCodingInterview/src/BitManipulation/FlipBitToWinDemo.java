@@ -12,11 +12,16 @@ public class FlipBitToWinDemo {
 		int currentLenght = 0;
 		int previousLength = 0;
 		int maxLength = 0;
+		if (num == -1) {
+			return Integer.BYTES * 8;
+		}
 		while (num != 0) {
-			// the bit is 1.
+			// the current bit is 1.
 			if ((num & 1) == 1) {
 				currentLenght++;
+				// the current bit is 0. See the next bit.
 			} else {
+				// the
 				previousLength = (num & 2) == 0 ? 0 : currentLenght;
 				currentLenght = 0;
 			}
