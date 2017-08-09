@@ -1,8 +1,11 @@
 package newSet;
 
 import java.util.Currency;
+import java.util.Stack;
 
 public class CheapestPathDemo {
+	static int cheapNodePath = Integer.MAX_VALUE;
+
 	public static void main(String[] args) {
 		GraphNode n1 = new GraphNode(0);
 		GraphNode n2 = new GraphNode(5);
@@ -27,29 +30,24 @@ public class CheapestPathDemo {
 		n6.addNeightbors(n10);
 		n7.addNeightbors(n11);
 		n10.addNeightbors(n12);
-		System.out.println(findCheapestPath(n1, Integer.MAX_VALUE));
-
+		System.out.println(findCheapestPath(n1, 0));
 	}
 
-	private static int findCheapestPath(GraphNode rootNode, int leastPathCost) {
+	private static int findCheapestPath(GraphNode rootNode, int currentCost) {
 		if (rootNode == null) {
 			return 0;
 		}
-
-		int currentCost = 0;
-		if (rootNode.getNeighbors() != null) {
-			// traverse the child nodes.
-
-			for (GraphNode node : rootNode.getNeighbors()) {
-				currentCost = node.getData() + findCheapestPath(node, leastPathCost);
-				if (currentCost < leastPathCost) {
-					leastPathCost = currentCost;
-				}
+		currentCost += rootNode.getData();
+		if (rootNode.getNeighbors().isEmpty()) {
+			if (cheapNodePath > currentCost) {
+				cheapNodePath = currentCost;
 			}
-
-		} else {
-			return 0;
+			return cheapNodePath;
 		}
-		return leastPathCost;
+
+		for (GraphNode eachNode : rootNode.getNeighbors()) {
+			findCheapestPath(eachNode, currentCost);
+		}
+		return cheapNodePath;
 	}
 }
