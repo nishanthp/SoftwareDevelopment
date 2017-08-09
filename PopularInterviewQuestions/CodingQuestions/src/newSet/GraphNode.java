@@ -13,14 +13,18 @@ public class GraphNode {
 	}
 
 	public void addNeightbors(GraphNode node) {
-		adjList.add(node);
+		this.adjList.add(node);
 	}
 
 	public ArrayList<GraphNode> getNeighbors() {
-		return adjList;
+		return this.adjList;
 	}
 
 	public boolean isVistesd() {
-		return isVisited;
+		return this.isVisited;
+	}
+
+	public int getData() {
+		return this.data;
 	}
 }
