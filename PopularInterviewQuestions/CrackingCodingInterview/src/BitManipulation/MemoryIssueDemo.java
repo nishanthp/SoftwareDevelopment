@@ -11,7 +11,7 @@ public class MemoryIssueDemo {
 			int temp = num - 1;
 			if (s.get(temp)) {
 				System.out.println(num);
-			}else{
+			} else {
 				s.set(temp);
 			}
 		}
