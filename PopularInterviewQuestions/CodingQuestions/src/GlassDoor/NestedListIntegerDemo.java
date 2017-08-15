@@ -19,15 +19,15 @@ public class NestedListIntegerDemo {
 		}
 		int sum = 0;
 		for (int i = 0; i < list.get(index).length(); i++) {
-			char presentChar = list.get(index).charAt(i);
+			Character presentChar = list.get(index).charAt(i);
+			int asciiValue = (int) presentChar;
 			if (presentChar == '{') {
 				depth++;
 			} else if (presentChar == '}') {
 				depth--;
-				
-			}
-			else if (48 >= presentChar && presentChar <= 57) {
-				sum += depth * presentChar;
+
+			} else if (asciiValue >= 48 && asciiValue <= 57) {
+				sum += depth * Integer.parseInt(presentChar.toString());
 			}
 		}
 
