@@ -21,7 +21,7 @@ public class ReplaceAllStringDemo {
 			}
 		}
 		// last part of the string.
-			buffer.append(input.substring(startIndex));
+		buffer.append(input.substring(startIndex));
 		return buffer.toString();
 	}
 }

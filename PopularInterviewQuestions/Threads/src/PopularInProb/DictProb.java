@@ -44,7 +44,7 @@ public class DictProb {
 	}
 
 	/**
-	 * This is better the previous one.
+	 * This is better than the previous one.
 	 * 
 	 * @param input
 	 *            in the form of char array.
