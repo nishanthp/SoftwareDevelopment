@@ -30,7 +30,24 @@ public class CheapestPathDemo {
 		n6.addNeightbors(n10);
 		n7.addNeightbors(n11);
 		n10.addNeightbors(n12);
-		System.out.println(findCheapestPath(n1, 0));
+		// System.out.println(findCheapestPath(n1, 0));
+		System.out.println(findCheapestPath_bottomUp(n1));
+	}
+
+	private static int findCheapestPath_bottomUp(GraphNode rootNode) {
+		if (rootNode.getNeighbors().isEmpty()) {
+			return rootNode.getData();
+		}
+
+		int min = Integer.MAX_VALUE;
+		for (GraphNode children : rootNode.getNeighbors()) {
+			int currentCost = findCheapestPath_bottomUp(children);
+			if (min > currentCost) {
+				min = currentCost;
+			}
+		}
+		return rootNode.getData() + min;
+
 	}
 
 	private static int findCheapestPath(GraphNode rootNode, int currentCost) {
@@ -50,4 +67,5 @@ public class CheapestPathDemo {
 		}
 		return cheapNodePath;
 	}
+
 }
