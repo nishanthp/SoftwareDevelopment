@@ -16,7 +16,8 @@ public class PairValueWithSubDemo {
 	}
 
 	// Time complexity - O(n+nlogn), Space complexity - O(1). Can be done using
-	// Hashmap, then space complexity will not be constant, but time complexity increases.
+	// Hashmap, then space complexity will not be constant, but time complexity
+	// increases.
 	private static int[][] findSubtractionPair(int[] input, int k) {
 		int left = 0;
 		int right = 1;
