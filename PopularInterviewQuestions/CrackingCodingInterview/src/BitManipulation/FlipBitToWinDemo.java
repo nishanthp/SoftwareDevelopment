@@ -21,7 +21,6 @@ public class FlipBitToWinDemo {
 				currentLenght++;
 				// the current bit is 0. See the next bit.
 			} else {
-				// the
 				previousLength = (num & 2) == 0 ? 0 : currentLenght;
 				currentLenght = 0;
 			}

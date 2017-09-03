@@ -43,20 +43,20 @@ public class SerializeBinaryTree {
 	}
 
 	public BinaryNode deserializeBinaryTree(String data) {
-		java.util.Deque nodes = new LinkedList<>();
+		java.util.Deque<String> nodes = new LinkedList<>();
 		nodes.addAll(Arrays.asList(data.split(",")));
-		return deserialize(nodes, 0);
+		return deserialize(nodes);
 	}
 
-	private BinaryNode deserialize(Deque nodes, int i) {
+	private BinaryNode deserialize(Deque<String> nodes) {
 		Object data = nodes.removeFirst();
 		if (data.equals("null")) {
 			return null;
 		}
 		int val = Integer.parseInt((String) data);
 		BinaryNode root = new BinaryNode(val);
-		root.left = deserialize(nodes, ++i);
-		root.right = deserialize(nodes, ++i);
+		root.left = deserialize(nodes);
+		root.right = deserialize(nodes);
 		return root;
 	}
 }
