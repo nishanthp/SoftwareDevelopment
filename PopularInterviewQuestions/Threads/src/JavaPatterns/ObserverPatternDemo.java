@@ -18,7 +18,6 @@ abstract class Observer {
 }
 
 class Observer1 extends Observer {
-	Subject subject;
 
 	public Observer1(Subject sub) {
 		this.subject = sub;
@@ -33,7 +32,6 @@ class Observer1 extends Observer {
 }
 
 class Observer2 extends Observer {
-	Subject subject;
 
 	public Observer2(Subject sub) {
 		this.subject = sub;

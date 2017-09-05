@@ -52,6 +52,7 @@ class Hasher<K, V> {
 		int hashKey = getIndexForKey(key);
 		if (array.get(hashKey) != null) {
 			current.next = array.get(hashKey);
+			current.next.prev = current;
 		}
 		array.set(hashKey, current);
 		return null;
@@ -90,6 +91,7 @@ class Hasher<K, V> {
 			if (current.key == key) {
 				return current;
 			}
+			current = current.next;
 		}
 		return null;
 	}

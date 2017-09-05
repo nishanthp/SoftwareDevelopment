@@ -11,13 +11,21 @@ public class CircularArrayDemo {
 		array.set(2, 3);
 		array.set(3, 4);
 
-		System.out.println(array.get(3));
-		for (int item : array) {
-			System.out.println(item);
+		// System.out.println(array.get(3));
+
+		// testing the iterator.
+		array.rotate(3);
+		Iterator<Integer> iterator = array.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
 		}
-		
-		array.rotate(2);
-		System.out.println(array.get(3));
+		/*
+		 * for (int item : array) { System.out.println(item); }
+		 */
+
+		/*
+		 * array.rotate(2); System.out.println(array.get(3));
+		 */
 	}
 }
 

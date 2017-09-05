@@ -78,10 +78,10 @@ class Stock {
 	}
 
 	public void buy() {
-		System.out.println("Bought the stock.");
+		System.out.println("Bought " + this.name + " stock.");
 	}
 
 	public void sell() {
-		System.out.println("Sold the stock.");
+		System.out.println("Sold " + this.name + " stock.");
 	}
 }
