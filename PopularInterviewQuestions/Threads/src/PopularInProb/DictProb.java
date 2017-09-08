@@ -7,10 +7,10 @@ public class DictProb {
 	public static ArrayList<String> meaningFullWords = new ArrayList<String>();
 
 	public static void main(String[] args) {
-		dict.add("Hello");
-		dict.add("World");
-		dict.add("is");
-		String input = "HelloWorldis";
+		dict.add("cats");
+		dict.add("dogs");
+		dict.add("si");
+		String input = "catsanddogsis";
 		/*
 		 * ArrayList<String> result = getMeaningfulWords(input, "", 0, 0);
 		 * System.out.println(result.get(0)); System.out.println(result.get(1));
@@ -57,7 +57,6 @@ public class DictProb {
 		for (int i = low; i < input.length; i++) {
 			buffer.append(input[i]);
 			if (dict.contains(buffer.toString())) {
-				meaningFullWords.add(buffer.toString());
 				String result = wordBreak(input, i + 1);
 				if (result != null) {
 					return buffer.toString() + " " + result;
