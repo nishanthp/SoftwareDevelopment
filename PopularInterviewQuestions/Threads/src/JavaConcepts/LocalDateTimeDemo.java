@@ -19,7 +19,7 @@ import org.joda.time.format.DateTimeFormatter;*/
  * @author prakasni
  *
  */
-public class LocalDateTimeDemo {
+public class LocalDateTimeDemo extends Object{
 	public static void main(String[] args) throws ParseException {
 		// simple date format.
 		String stringfromUser = new String("23:34");
@@ -70,4 +70,6 @@ public class LocalDateTimeDemo {
 		java.time.LocalTime t3 = java.time.LocalTime.now();
 		System.out.println("This is min." + t3.getMinute());
 	}
+	
+	
 }

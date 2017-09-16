@@ -1,11 +1,10 @@
 package Arrays;
 
 public class Sort0s1s2s {
-	static int input[] = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
-
 	public static void main(String[] args) {
+		int input[] = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
 		Sort0s1s2s sort = new Sort0s1s2s();
-		sort.sortArray();
+		sort.sortArray(input);
 
 		// print
 		for (int digit : input) {
@@ -13,7 +12,7 @@ public class Sort0s1s2s {
 		}
 	}
 
-	public void sortArray() {
+	public void sortArray(int[] input) {
 		int high = input.length - 1;
 		int low = 0;
 		int mid = 0;

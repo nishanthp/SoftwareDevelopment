@@ -12,12 +12,12 @@ public class ReadWriteLockDemo {
 		TreadSafeArray array = new TreadSafeArray();
 		Thread tw = new ThreadWrite(array);
 		tw.start();
-
 		Thread tr1 = new ThreadRead(array);
 		tr1.start();
-
+		tr1.join();
 		Thread tr2 = new ThreadRead(array);
 		tr2.start();
+		tr2.join();
 
 	}
 }
@@ -52,12 +52,9 @@ class ThreadWrite extends Thread {
 
 	@Override
 	public void run() {
-		int i = 0;
-		while (i < 3) {
-			System.out.println("THREAD NAME:      " + getName());
-			this.localArray.setValue(11);
-			i++;
-		}
+		System.out.println("THREAD NAME:      " + getName());
+		this.localArray.setValue(11);
+
 	}
 
 }
@@ -66,23 +63,22 @@ class TreadSafeArray {
 	ReadWriteLock lock = new ReentrantReadWriteLock();
 	Lock readLock;
 	Lock writeLock;
-	ArrayList<Integer> integerArray = new ArrayList<>();
+	int sharedResource;
 
 	public TreadSafeArray() {
-		integerArray.add(10);
 		readLock = lock.readLock();
 		writeLock = lock.writeLock();
 	}
 
 	public void setValue(Integer i) {
 		writeLock.lock();
-		integerArray.add(1, i);
+		sharedResource = i;
 		writeLock.unlock();
 	}
 
 	public Integer getValue() {
 		readLock.lock();
-		int returnVal = integerArray.get(0);
+		int returnVal = sharedResource;
 		readLock.unlock();
 		return returnVal;
 	}

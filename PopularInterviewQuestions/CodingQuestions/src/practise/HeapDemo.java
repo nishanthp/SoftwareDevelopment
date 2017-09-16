@@ -77,7 +77,7 @@ class Heap {
 				this.heap.set(parentIndex, this.heap.get(maxItemIndex));
 				this.heap.set(maxItemIndex, temp);
 				parentIndex = maxItemIndex;
-				leftChildIndex = 2 * (parentIndex + 1);
+				leftChildIndex = 2 *parentIndex + 1;
 			} else
 				break;
 		}

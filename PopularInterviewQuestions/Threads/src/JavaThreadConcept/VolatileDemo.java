@@ -9,7 +9,7 @@ public class VolatileDemo {
 		new Thread(new ThreadListner()).start();
 	}
 
-	static class ThreadChanger implements Runnable {
+	static class ThreadChanger extends Object implements Runnable {
 		@Override
 		public void run() {
 			int localVar = my_variable;

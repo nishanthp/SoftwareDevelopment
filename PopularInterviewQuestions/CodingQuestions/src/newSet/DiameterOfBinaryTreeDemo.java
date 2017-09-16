@@ -1,6 +1,8 @@
 package newSet;
 
 public class DiameterOfBinaryTreeDemo {
+	static int max = 0;
+
 	public static void main(String[] args) {
 		Node root = new Node(12);
 		Node root1 = new Node(13);
@@ -14,8 +16,12 @@ public class DiameterOfBinaryTreeDemo {
 		root1.right = root4;
 
 		DiameterOfBinaryTreeDemo d = new DiameterOfBinaryTreeDemo();
-		int diameter = d.findDiameterOfTree(root);
-		System.out.println(diameter);
+		/*
+		 * int diameter = d.findDiameterOfTree(root);
+		 * System.out.println(diameter);
+		 */
+		d.HeightBTree(root);
+		System.out.println(max);
 	}
 
 	public int height(Node root) {
@@ -39,6 +45,20 @@ public class DiameterOfBinaryTreeDemo {
 		int rightDia = findDiameterOfTree(root.right);
 
 		return Math.max(leftHeight + rightHeight + 1, Math.max(leftDia, rightDia));
+	}
+
+	// Simpler way with just height.
+	public int HeightBTree(Node root) {
+		if (root == null) {
+			return 0;
+		}
+		int left = HeightBTree(root.left);
+		int right = HeightBTree(root.right);
+
+		max = Math.max(max, left + right);
+
+		return Math.max(left, right) + 1;
+
 	}
 
 }

@@ -2,11 +2,10 @@ package BitManipulation;
 
 public class PairwiseSwapDemo {
 	public static void main(String[] args) {
-		int n = 0xAA;
+		int n = 0x55;
 		System.out.println(Integer.toBinaryString(n));
 		int r = pairwiseSwap(n);
-
-		System.out.println(r);
+		System.out.println(Integer.toBinaryString(r));
 	}
 
 	// logical right shift not arithmetic right shift.

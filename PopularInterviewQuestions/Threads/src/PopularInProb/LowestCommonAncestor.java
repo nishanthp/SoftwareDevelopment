@@ -1,7 +1,12 @@
 package PopularInProb;
-
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 public class LowestCommonAncestor {
 	public static void main(String[] args) {
+		LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
+		map.put(1, 2);
+		HashMap<Integer, Integer> k = new HashMap<>();
+		k.put(1, 2);
 		LCANode root = new LCANode(7);
 		LCANode node1 = new LCANode(3);
 		LCANode node2 = new LCANode(4);

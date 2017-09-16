@@ -31,13 +31,13 @@ public class RecoverBSTDemo {
 			return;
 		}
 		inorderTraversal(root.left);
-		if (prev != null) {
-			if (prev.data >= root.data) {
-				n1 = prev;
-				n2 = root;
-			}
+		if (prev == null) {
+			prev = root;
+		} else if (root.data < prev.data) {
+			n1 = prev;
+			n2 = root;
+			prev = root;
 		}
-		prev = root;
 		inorderTraversal(root.right);
 	}
 }

@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 public class SemaphoreDemo {
 	public static void main(String[] args) {
-		Semaphore sem = new Semaphore(2);
+		Semaphore sem = new Semaphore(4);
 		Thread_3 t1 = new Thread_3(sem);
 		Thread_3 t2 = new Thread_3(sem);
 		Thread_3 t3 = new Thread_3(sem);

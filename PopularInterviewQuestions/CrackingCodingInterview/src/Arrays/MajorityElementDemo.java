@@ -2,7 +2,7 @@ package Arrays;
 
 public class MajorityElementDemo {
 	public static void main(String[] args) {
-		int[] input = { 1, 1, 13 };
+		int[] input = { 1, 1, 2,3,4 };
 		System.out.println(findMajorityElement(input));
 
 	}

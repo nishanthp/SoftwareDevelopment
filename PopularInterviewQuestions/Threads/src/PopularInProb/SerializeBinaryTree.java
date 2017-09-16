@@ -43,7 +43,7 @@ public class SerializeBinaryTree {
 	}
 
 	public BinaryNode deserializeBinaryTree(String data) {
-		java.util.Deque<String> nodes = new LinkedList<>();
+		Deque<String> nodes = new LinkedList<>();
 		nodes.addAll(Arrays.asList(data.split(",")));
 		return deserialize(nodes);
 	}
@@ -55,6 +55,9 @@ public class SerializeBinaryTree {
 		}
 		int val = Integer.parseInt((String) data);
 		BinaryNode root = new BinaryNode(val);
+		
+		
+		
 		root.left = deserialize(nodes);
 		root.right = deserialize(nodes);
 		return root;

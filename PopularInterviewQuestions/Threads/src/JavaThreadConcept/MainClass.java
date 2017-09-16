@@ -29,6 +29,7 @@ class thread extends Thread {
 		setPriority(10);
 		System.out.println("PRIORITY\t" + getPriority());
 		local.set(new Date().toString());
+		setName("HelloThread");
 		System.out.println("THREAD NAME\t" + getName() + "THREAD START:" + local.get());
 		classLock.display();
 

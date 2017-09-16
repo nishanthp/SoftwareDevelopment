@@ -34,12 +34,14 @@ public class FlattenBinaryTreeDemo {
 	public Node flattenBinaryTree(Node root) {
 		Node p = root;
 		Stack<Node> stack = new Stack<>();
-		while (p != null) {
-			if (p.left != null & p.right != null) {
-				stack.push(p.right);
+		while (p != null || !stack.isEmpty()) {
+			if (p.right != null) {
+				stack.push(p);
+			}
+			if (p.left != null) {
 				p.right = p.left;
 				p.left = null;
-			} else if (!stack.isEmpty() && p.right == null) {
+			} else if (!stack.isEmpty()) {
 				p.right = stack.pop();
 			}
 			p = p.right;

@@ -46,7 +46,7 @@ public class FlattenLinkedListDemo {
 			return head;
 		}
 		head.right = flatten(head.right);
-		merge(head, head.right);
+		head = merge(head, head.right);
 		return head;
 	}
 
