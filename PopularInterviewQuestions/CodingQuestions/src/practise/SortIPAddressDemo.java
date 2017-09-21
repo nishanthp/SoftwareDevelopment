@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-public class ModifyComparator {
+public class SortIPAddressDemo {
 
 	public static void main(String[] args) {
 		Comparator<String> comparator = new Comparator<String>() {

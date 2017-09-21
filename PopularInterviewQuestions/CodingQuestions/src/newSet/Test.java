@@ -30,13 +30,9 @@ public class Test {
 		 */
 
 		int[] input = { 1, 2, 3, 4, 5 };
-		int s = input.length;
-		ArrayList<Integer> arr =  new ArrayList<>();
-		arr.size();
 		String s = " egjner";
 		s.length();
-		int[] s = Arrays.copyOf(input, input.length);
-		for (int temp : s) {
+		for (int temp : input) {
 			System.out.println(temp);
 		}
 	}
