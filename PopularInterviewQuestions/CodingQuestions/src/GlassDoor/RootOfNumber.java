@@ -16,7 +16,7 @@ public class RootOfNumber {
 		}
 		float mid = (left + right) / 2;
 		if (Math.abs(actualValue - Math.pow(mid, pow)) <= 0.001) {
-			return mid;
+			return Math.round(mid);
 		}
 		if (Math.pow(mid, pow) > actualValue) {
 			// observe the change here.
