@@ -3,7 +3,7 @@ package Stack;
 import java.util.Stack;
 
 public class MinVauleInStackDemo {
-	static Stack<Stacknode> stack = new Stack();
+	static Stack<StackNode> stack = new Stack();
 	static int minimumValue = Integer.MAX_VALUE;
 
 	public static void main(String[] args) {
@@ -29,9 +29,9 @@ public class MinVauleInStackDemo {
 	}
 
 	public void push(int data) {
-		Stacknode temp;
+		StackNode temp;
 		minimumValue = Math.min(minimumValue, data);
-		temp = new Stacknode(data);
+		temp = new StackNode(data);
 		temp.setMinValueSoFar(minimumValue);
 		stack.push(temp);
 	}
@@ -41,11 +41,11 @@ public class MinVauleInStackDemo {
 	}
 }
 
-class Stacknode {
+class StackNode {
 	int data;
 	int minValueSoFar;
 
-	public Stacknode(int data) {
+	public StackNode(int data) {
 		this.data = data;
 
 	}

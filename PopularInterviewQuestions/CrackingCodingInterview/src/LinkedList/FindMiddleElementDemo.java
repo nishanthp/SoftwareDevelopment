@@ -27,6 +27,6 @@ public class FindMiddleElementDemo {
 			fastRunner = fastRunner.next.next;
 			slowRunner = slowRunner.next;
 		}
-		return slowRunner.data;
+		return (int) slowRunner.data;
 	}
 }

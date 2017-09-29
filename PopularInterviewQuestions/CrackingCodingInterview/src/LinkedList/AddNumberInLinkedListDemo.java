@@ -28,12 +28,12 @@ public class AddNumberInLinkedListDemo {
 
 	}
 
-	public Node addNumbers(Node h1, Node h2) {
+	public Node addNumbers(Node<Integer> h1, Node<Integer> h2) {
 		if (h1 == null && h2 == null) {
 			return null;
 		}
 		Node result = addNumbers(h1.next, h2.next);
-		int resultant = h1.data + h2.data + carry;
+		int resultant = (int) (h1.data + h2.data + carry);
 		carry = resultant / 10;
 		Node temp = new Node(resultant % 10);
 		temp.next = result;

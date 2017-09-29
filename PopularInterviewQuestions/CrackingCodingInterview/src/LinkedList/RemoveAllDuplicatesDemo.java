@@ -28,8 +28,8 @@ public class RemoveAllDuplicatesDemo {
 	}
 
 	public void removeAllDuplicates(Node head) {
-		Node current = head;
-		Node previous = null;
+		Node<Integer> current = head;
+		Node<Integer> previous = null;
 		while (current != null) {
 			if (map.containsKey(current.data)) {
 				previous.next = current.next;

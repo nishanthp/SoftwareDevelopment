@@ -57,7 +57,7 @@ public class SwapLinkedListPairWiseDemo {
 	public Node swapPairWiseData(Node head) {
 		Node current = head;
 		while (current != null && current.next != null) {
-			int temp = current.next.data;
+			int temp = (int) current.next.data;
 			current.next.data = current.data;
 			current.data = temp;
 			current = current.next.next;

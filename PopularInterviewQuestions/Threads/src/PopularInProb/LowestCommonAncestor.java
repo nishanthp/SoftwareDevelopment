@@ -5,7 +5,6 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 public class LowestCommonAncestor {
 	public static void main(String[] args) {
-		Lock
 		LCANode root = new LCANode(7);
 		LCANode node1 = new LCANode(3);
 		LCANode node2 = new LCANode(4);
