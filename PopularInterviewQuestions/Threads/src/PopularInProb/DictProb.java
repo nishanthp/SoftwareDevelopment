@@ -1,6 +1,8 @@
 package PopularInProb;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class DictProb {
 	public static ArrayList<String> dict = new ArrayList<String>();
@@ -8,8 +10,8 @@ public class DictProb {
 
 	public static void main(String[] args) {
 		dict.add("cats");
+		dict.add("and");
 		dict.add("dogs");
-		dict.add("si");
 		String input = "catsanddogsis";
 		/*
 		 * ArrayList<String> result = getMeaningfulWords(input, "", 0, 0);
@@ -19,29 +21,52 @@ public class DictProb {
 
 		String res = DictProb.wordBreak(input.toCharArray(), 0);
 		System.out.println(res);
+		/*
+		 * Set<String> dictonary = new HashSet<>(); dictonary.add("cats");
+		 * dictonary.add("dogs"); dictonary.add("si"); boolean res =
+		 * DictProb.wordBreak(input, dictonary); System.out.println(res);
+		 */
 
 	}
 
-	public static ArrayList<String> getMeaningfulWords(String input, String wordSoFar, int outerIndex, int innerIndex) {
-		if (outerIndex >= input.length() || innerIndex >= input.length()) {
-			return meaningFullWords;
-		}
-		for (int i = outerIndex; i < input.length(); i++) {
-			String eachChar = Character.toString(input.charAt(innerIndex));
-			wordSoFar = wordSoFar + eachChar;
-			if (dict.contains(wordSoFar)) {
-				meaningFullWords.add(wordSoFar);
-				getMeaningfulWords(input, "", outerIndex + 1, outerIndex + 1);
-			} else {
-				getMeaningfulWords(input, wordSoFar, outerIndex, innerIndex + 1);
+	// most popular answer. Wont get the words though.
+	public static boolean wordBreak(String s, Set<String> dict) {
+		if (s == null || s.length() == 0)
+			return false;
+
+		int n = s.length();
+
+		// dp[i] represents whether s[0...i] can be formed by dict
+		boolean[] dp = new boolean[n];
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j <= i; j++) {
+				String sub = s.substring(j, i + 1);
+
+				if (dict.contains(sub) && (j == 0 || dp[j - 1])) {
+					dp[i] = true;
+					break;
+				}
 			}
-			wordSoFar = "";
-			outerIndex++;
-			innerIndex = outerIndex;
-
 		}
-		return meaningFullWords;
+
+		return dp[n - 1];
 	}
+
+	/*
+	 * public static ArrayList<String> getMeaningfulWords(String input, String
+	 * wordSoFar, int outerIndex, int innerIndex) { if (outerIndex >=
+	 * input.length() || innerIndex >= input.length()) { return
+	 * meaningFullWords; } for (int i = outerIndex; i < input.length(); i++) {
+	 * String eachChar = Character.toString(input.charAt(innerIndex)); wordSoFar
+	 * = wordSoFar + eachChar; if (dict.contains(wordSoFar)) {
+	 * meaningFullWords.add(wordSoFar); getMeaningfulWords(input, "", outerIndex
+	 * + 1, outerIndex + 1); } else { getMeaningfulWords(input, wordSoFar,
+	 * outerIndex, innerIndex + 1); } wordSoFar = ""; outerIndex++; innerIndex =
+	 * outerIndex;
+	 * 
+	 * } return meaningFullWords; }
+	 */
 
 	/**
 	 * This is better than the previous one.
@@ -64,9 +89,7 @@ public class DictProb {
 					return buffer.toString();
 			}
 		}
-		if (dict.contains(buffer.toString())) {
-			return buffer.toString();
-		}
 		return null;
 	}
+
 }

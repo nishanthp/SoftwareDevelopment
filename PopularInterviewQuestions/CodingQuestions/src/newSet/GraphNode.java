@@ -8,6 +8,8 @@ public class GraphNode {
 	int data;
 	boolean isVisited = Boolean.FALSE;
 
+	State state;
+
 	public GraphNode(int inp) {
 		this.data = inp;
 	}
@@ -27,4 +29,17 @@ public class GraphNode {
 	public int getData() {
 		return this.data;
 	}
+
+	public void setState(State state) {
+		this.state = state;
+	}
+
+	public State getState() {
+		return this.state;
+	}
+}
+
+enum State {
+	UNVISITED, VISITING, VISITED
+
 }

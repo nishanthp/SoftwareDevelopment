@@ -29,12 +29,37 @@ public class Test {
 		 * e.printStackTrace(); }
 		 */
 
-		int[] input = { 1, 2, 3, 4, 5 };
-		String s = " egjner";
-		s.length();
-		for (int temp : input) {
-			System.out.println(temp);
-		}
+		int a = 99;
+		int b = 1;
+		swap(a, b);
+		/*System.out.println(a);
+		System.out.println(b);*/
+
+		Wrapper w = new Wrapper();
+		w.a = 99;
+		w.b = 1;
+		swap(w);
+		System.out.println(w.a);
+		System.out.println(w.b);
+
+		/*
+		 * int[] input = { 1, 2, 3, 4, 5 }; String s = " egjner"; s.length();
+		 * for (int temp : input) { System.out.println(temp); }
+		 */
+	}
+
+	private static void swap(Wrapper w) {
+		int temp = w.a;
+		w.a = w.b;
+		w.b = temp;
+
+	}
+
+	private static void swap(int a, int b) {
+		int temp = a;
+		a = b;
+		b = a;
+
 	}
 
 	// insert in order of array.
@@ -62,4 +87,13 @@ public class Test {
 		}
 		return max;
 	}
+}
+
+class Wrapper {
+	public Wrapper() {
+		// TODO Auto-generated constructor stub
+	}
+
+	int a;
+	int b;
 }

@@ -22,8 +22,8 @@ class Hasher<K, V> {
 	private class LinkedListNode<K, V> {
 		K key;
 		V value;
-		LinkedListNode next;
-		LinkedListNode prev;
+		LinkedListNode<K, V> next;
+		LinkedListNode<K, V> prev;
 
 		public LinkedListNode(K key, V value) {
 			this.key = key;
