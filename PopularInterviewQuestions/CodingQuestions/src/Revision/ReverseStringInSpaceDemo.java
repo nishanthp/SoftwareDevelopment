@@ -14,15 +14,15 @@ public class ReverseStringInSpaceDemo {
 			return input;
 		}
 		// reverse the entire array.
-		input = reverse(input, 0, input.length - 1);
+		reverse(input, 0, input.length - 1);
 		// reverse each word in the string.
 		int j = 0;
 		for (int i = 0; i < input.length - 1;) {
 			if (j >= input.length) {
-				input = reverse(input, i, j - 1);
+				reverse(input, i, j - 1);
 				break;
 			} else if (input[j] == ' ') {
-				input = reverse(input, i, j - 1);
+				reverse(input, i, j - 1);
 				i = j + 1;
 				j = i;
 			} else {
