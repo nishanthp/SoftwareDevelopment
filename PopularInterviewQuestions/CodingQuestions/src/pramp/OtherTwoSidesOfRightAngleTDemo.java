@@ -1,4 +1,4 @@
-package newSet;
+package pramp;
 
 import javax.print.attribute.standard.MediaSize.Other;
 

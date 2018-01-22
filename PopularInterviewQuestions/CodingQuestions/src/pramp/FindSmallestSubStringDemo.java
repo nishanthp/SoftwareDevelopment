@@ -1,4 +1,4 @@
-package newSet;
+package pramp;
 
 // In constant space.
 public class FindSmallestSubStringDemo {

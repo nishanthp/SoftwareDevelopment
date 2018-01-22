@@ -1,4 +1,4 @@
-package newSet;
+package pramp;
 
 public class RegexDemo {
 	public static void main() {

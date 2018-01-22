@@ -1,7 +1,4 @@
-package newSet;
-
-import javax.print.attribute.standard.JobHoldUntil;
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+package pramp;
 
 public class DuplicateElementArraysDemo {
 	static int outIndex = 0;

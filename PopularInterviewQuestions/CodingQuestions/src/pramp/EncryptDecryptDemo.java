@@ -1,4 +1,4 @@
-package newSet;
+package pramp;
 
 public class EncryptDecryptDemo {
 	public static void main(String[] args) {

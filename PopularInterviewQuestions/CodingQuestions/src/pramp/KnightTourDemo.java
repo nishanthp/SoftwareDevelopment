@@ -1,6 +1,4 @@
-package newSet;
-
-import javax.management.monitor.CounterMonitorMBean;
+package pramp;
 
 public class KnightTourDemo {
 	static int count = 0;

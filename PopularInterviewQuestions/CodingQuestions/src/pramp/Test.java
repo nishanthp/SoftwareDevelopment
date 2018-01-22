@@ -1,4 +1,4 @@
-package newSet;
+package pramp;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

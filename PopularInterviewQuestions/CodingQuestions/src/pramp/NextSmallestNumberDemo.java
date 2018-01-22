@@ -1,4 +1,4 @@
-package newSet;
+package pramp;
 
 public class NextSmallestNumberDemo {
 	public static void main(String[] args) {

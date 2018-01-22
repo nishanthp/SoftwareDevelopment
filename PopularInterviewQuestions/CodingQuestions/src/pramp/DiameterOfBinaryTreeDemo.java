@@ -1,4 +1,4 @@
-package newSet;
+package pramp;
 
 public class DiameterOfBinaryTreeDemo {
 	static int max = 0;
