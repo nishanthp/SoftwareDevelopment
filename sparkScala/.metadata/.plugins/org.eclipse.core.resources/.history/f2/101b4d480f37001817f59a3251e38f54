@@ -1,0 +1,43 @@
+package main
+
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import javax.script.ScriptContext
+import scala.io.*
+
+object PopularMovie {
+  def movieNames() : Map[Int, String] ={
+    implicit val codec = Codec("UTF-8");
+    var movieMap:Map[Int, String] = Map();
+    
+    val lines = Source.fromFile("../ml-100k/u.item").getLines();
+    
+    for (line <- lines) {
+      val fields = line.split("|");
+      movieMap += (fields(0).toInt -> fields(1));
+      
+    }
+    
+     return movieMap;
+  }
+  
+  def main(args: Array[String]){
+    Logger.getLogger("org").setLevel(Level.ERROR);
+    
+    val sc = new SparkContext("local[*]", "popularMovie");
+    
+    val movieMap = sc.broadcast(movieNames);
+    
+    val movieListrdd = sc.textFile("../ml-100k/u.data");
+    
+    val movieIdsrdd = movieListrdd.map(x => (x.split("\t")(1).toInt, 1));
+    
+    val popularMovies = movieIdsrdd.reduceByKey((x,y) => x + y).map(x => (x._2, x._1)).sortByKey().map(x => (x._1, movieMap.value(x._2)));
+    
+    popularMovies.collect()foreach(println);
+    
+    
+    
+  }
+}

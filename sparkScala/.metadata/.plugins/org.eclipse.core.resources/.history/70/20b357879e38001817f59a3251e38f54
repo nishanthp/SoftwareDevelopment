@@ -1,0 +1,35 @@
+package main
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import javax.script.ScriptContext
+import org.apache.spark.sql.SparkSession
+
+object SparkSQL2 {
+  case class Person (ID:Int, name:String, age:Int, numFriends:Int);
+ 
+  def mapper(line: String):Person={
+    val fields = line.split(",");
+    return Person (fields(0).toInt, fields(1), fields(2).toInt, fields(3).toInt);
+  }
+  
+  def main(args: Array[String]){
+    
+  Logger.getLogger("org").setLevel(Level.ERROR);
+  
+  val session = SparkSession.builder().appName("SQL2").master("local[*]").getOrCreate();
+  
+  val sparkContextFile = session.sparkContext.textFile("../fakefriends.csv");
+  
+  val structDatardd = sparkContextFile.map(mapper);
+  
+  import session.implicits._
+  
+  val personSet = structDatardd.toDS().cache();
+  
+  personSet.printSchema();
+  
+  personSet.sele
+  }
+  
+}

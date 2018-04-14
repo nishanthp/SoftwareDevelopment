@@ -1,0 +1,8 @@
+package main
+
+object SparkSQL {
+  def main(args: Array[String]){
+    
+  }
+  
+}

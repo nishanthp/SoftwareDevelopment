@@ -1,0 +1,30 @@
+package main
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import javax.script.ScriptContext
+import org.apache.spark.mllib.recommendation._
+
+object MLLib {
+  //case class Rating(USERID: Int, MOVIEID: Int, Rating:Int, timestamp:Int)
+  def main(args: Array[String]){
+    Logger.getLogger("org").setLevel(Level.ERROR);
+    
+    val sc = new SparkContext("local[*]", "ML");
+    
+    val dataFile = sc.textFile("../ml-100k/u.data");
+    
+    val structuredData = dataFile.map(x => x.split("\t")).map(x => Rating(x(0).toInt, x(1).toInt,x(2).toDouble));
+    
+    val rank = 3;
+    val numOfInteration = 20;
+    
+    // take the rdd and create a model.
+    val model = ALS.train(structuredData, rank, numOfInteration);
+    
+    // recommend movie to which user. Input from commandline.
+    val userID = args(0).toInt;
+    
+    
+  }
+}

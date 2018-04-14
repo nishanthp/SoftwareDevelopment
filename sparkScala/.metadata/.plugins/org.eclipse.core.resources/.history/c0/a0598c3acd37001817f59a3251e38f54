@@ -1,0 +1,61 @@
+package main
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import javax.script.ScriptContext
+import shapeless.ops.nat.ToInt
+import org.supercsv.cellprocessor.Trim
+
+object PopularSuperHero {
+  def parseDatabase(line: String): Option[(Int, String)]={
+    val fields = line.split("\"");
+    if (fields.length > 1){
+      return Some(fields(0).trim().toInt, fields(1))
+    } else
+      return None;
+  }
+  
+  def coConnections(line: String): (Int, Int)={
+    val fields = line.split(" ");    
+    return (fields(0).toInt, fields.length -1) 
+  }
+  
+  def main(args: Array[String]){
+    Logger.getLogger("org").setLevel(Level.ERROR);
+    
+    val sc = new SparkContext("local[*]", "SuperHero");
+    
+    val superHDatabase = sc.textFile("../Marvel-names.txt");
+    
+    // flatmap ignores none values unlike a map.
+    val databaserdd = superHDatabase.flatMap(parseDatabase);
+    
+    val superHConnections = sc.textFile("../Marvel-graph.txt");
+    
+    val connectionsrdd = superHConnections.map(coConnections);
+    
+    val connectionsKey = connectionsrdd.reduceByKey((x,y) => x+y);
+    
+    val flipped  = connectionsKey.map(x => (x._2, x._1)).sortByKey(false);
+    
+    val results = flipped.collect(); 
+    
+    var i = 0;
+    for (i <- 0 to 9){
+       val actualHero = (databaserdd.lookup(results(i)._2), results(i)._1)
+       println(actualHero);
+     }
+    
+    //var maxConnection = flipped.max();
+    
+    //var superHero = (maxConnection._1, databaserdd.lookup(maxConnection._2)(0));
+    
+    //println(superHero)
+    
+    //val superHeroName = databaserdd.lookup(maxConnection._2)(0)
+    
+    //println(superHeroName + " " + maxConnection._1);
+    
+    
+  }
+}

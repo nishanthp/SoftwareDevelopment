@@ -1,0 +1,55 @@
+package main
+import org.apache.spark._
+import org.apache.spark.sql._
+import org.apache.spark.SparkContext._
+import org.apache.log4j._
+import javax.script.ScriptContext
+import scala.io.Source
+import scala.io.Codec
+import java.nio.charset.CodingErrorAction
+import org.apache.spark.sql.SparkSession
+
+object PopularMovieSQL {
+    case class MovieID (ID: Int);
+
+    def movieNames() : Map[Int, String] ={
+    implicit val codec = Codec("UTF-8");
+    codec.onMalformedInput(CodingErrorAction.REPLACE);
+    codec.onUnmappableCharacter(CodingErrorAction.REPLACE);
+    
+    var movieMap:Map[Int, String] = Map();
+    
+    val lines = Source.fromFile("../ml-100k/u.item").getLines();
+    
+    for (line <- lines) {
+      var fields = line.split('|');
+      if (fields.length > 1) {
+      movieMap += (fields(0).toInt -> fields(1));
+    }
+      
+      
+    }
+    
+     return movieMap;
+  }
+    def main(args: Array[String]){
+      Logger.getLogger("org").setLevel(Level.ERROR);
+  
+  val session = SparkSession.builder().appName("PopularMovies").master("local[*]").getOrCreate();
+  
+  val sparkContextFile = session.sparkContext.textFile("../ml-100k/u.data");
+  
+  
+  val movieIDrdd = sparkContextFile.map(x => MovieID(x.split("\t")(1).toInt));
+  
+  import session.implicits._  
+  val movieIDDataSet = movieIDrdd.toDS();
+  
+  // no need to reverse as in case of an rdd.
+  movieIDDataSet.groupBy("ID").count().cache();
+  
+  
+  
+    }
+  
+}
