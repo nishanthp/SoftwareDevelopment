@@ -3,8 +3,6 @@ package Arrays;
 public class SearchElementSortedRotatedArrayDemo {
 	public static void main(String[] args) {
 		int[] array1 = { 10, 15, 20, 0, 5 };
-		int n = 5/2;
-		System.out.println(n);
 		System.out.println(findElement(array1, 0, array1.length - 1, 5));
 	}
 
