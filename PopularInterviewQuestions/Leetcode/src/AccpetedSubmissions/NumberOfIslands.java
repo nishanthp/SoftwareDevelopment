@@ -4,6 +4,9 @@ public class NumberOfIslands {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
+		char x = 'A';
+		System.out.println(x ^= 256);
+
 	}
 
 	char[][] grid;
