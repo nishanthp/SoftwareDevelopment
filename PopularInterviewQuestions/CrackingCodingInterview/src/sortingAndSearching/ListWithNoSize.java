@@ -1,4 +1,4 @@
-package SortingAndSearching;
+package sortingAndSearching;
 
 import java.util.*;
 

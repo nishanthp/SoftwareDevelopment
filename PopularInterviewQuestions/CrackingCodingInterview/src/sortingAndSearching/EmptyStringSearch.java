@@ -1,4 +1,4 @@
-package SortingAndSearching;
+package sortingAndSearching;
 
 public class EmptyStringSearch {
 	public static void main(String[] args) {

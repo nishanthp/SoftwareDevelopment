@@ -1,4 +1,4 @@
-package ObjectOrientedDesign;
+package objectOrientedDesign;
 
 import java.util.ArrayList;
 import java.util.Date;
