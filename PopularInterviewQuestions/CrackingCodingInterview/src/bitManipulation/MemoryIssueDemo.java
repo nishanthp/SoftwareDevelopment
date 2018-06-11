@@ -1,4 +1,4 @@
-package BitManipulation;
+package bitManipulation;
 
 public class MemoryIssueDemo {
 	public static void main(String[] args) {

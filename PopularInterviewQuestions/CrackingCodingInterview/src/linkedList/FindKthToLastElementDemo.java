@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedList;
 
 public class FindKthToLastElementDemo {
 	public static void main(String[] args) {

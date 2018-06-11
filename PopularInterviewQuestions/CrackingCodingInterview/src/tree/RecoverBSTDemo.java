@@ -1,4 +1,4 @@
-package Tree;
+package tree;
 
 public class RecoverBSTDemo {
 	static Node prev = null;

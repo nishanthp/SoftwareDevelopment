@@ -1,4 +1,4 @@
-package Tree;
+package tree;
 
 public class CreateBTfrmArrayDemo {
 	static int[] input = { 1, 2, 3, 4, 5, 6, 7 };

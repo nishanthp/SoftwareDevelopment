@@ -1,4 +1,4 @@
-package BitManipulation;
+package bitManipulation;
 
 public class InsertionDemo {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package BitManipulation;
+package bitManipulation;
 
 import java.util.Currency;
 

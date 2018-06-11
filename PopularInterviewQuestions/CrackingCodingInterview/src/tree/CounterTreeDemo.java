@@ -1,4 +1,4 @@
-package Tree;
+package tree;
 
 public class CounterTreeDemo {
 	static int counter = 0;

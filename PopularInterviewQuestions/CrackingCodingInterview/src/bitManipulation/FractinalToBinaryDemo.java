@@ -1,4 +1,4 @@
-package BitManipulation;
+package bitManipulation;
 
 public class FractinalToBinaryDemo {
 	public static void main(String[] args) {

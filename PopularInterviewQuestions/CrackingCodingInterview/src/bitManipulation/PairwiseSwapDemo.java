@@ -1,4 +1,4 @@
-package BitManipulation;
+package bitManipulation;
 
 public class PairwiseSwapDemo {
 	public static void main(String[] args) {

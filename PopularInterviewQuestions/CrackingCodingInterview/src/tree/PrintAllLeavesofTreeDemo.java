@@ -1,4 +1,4 @@
-package Tree;
+package tree;
 
 public class PrintAllLeavesofTreeDemo {
 	public static void main(String[] args) {

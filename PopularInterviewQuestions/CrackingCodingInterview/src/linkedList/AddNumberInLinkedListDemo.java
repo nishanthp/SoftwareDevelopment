@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedList;
 
 public class AddNumberInLinkedListDemo {
 	int carry = 0;

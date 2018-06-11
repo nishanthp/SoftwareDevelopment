@@ -1,4 +1,4 @@
-package Tree;
+package tree;
 
 public class MovieRatingsDemo {
 	public static void main(String[] args) {
