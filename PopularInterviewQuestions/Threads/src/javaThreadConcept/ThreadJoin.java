@@ -1,6 +1,6 @@
-package JavaThreadConcept;
+package javaThreadConcept;
 
-public class MainClass5 {
+public class ThreadJoin {
 	public static void main(String[] args) throws InterruptedException {
 		thread6 t1 = new thread6("t1");
 		thread6 t2 = new thread6("t2");

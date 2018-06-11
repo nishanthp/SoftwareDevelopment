@@ -1,4 +1,4 @@
-package JavaConcepts;
+package javaConcepts;
 
 public class GenericClassDemo<T extends Object> {
 	T sum;

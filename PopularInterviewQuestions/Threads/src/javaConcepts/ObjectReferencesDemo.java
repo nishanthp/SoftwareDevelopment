@@ -1,4 +1,4 @@
-package JavaConcepts;
+package javaConcepts;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;

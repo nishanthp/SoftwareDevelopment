@@ -1,4 +1,4 @@
-package JavaPatterns;
+package javaPatterns;
 
 public class FactoryPatternDemo {
 	public static void main(String[] args) {

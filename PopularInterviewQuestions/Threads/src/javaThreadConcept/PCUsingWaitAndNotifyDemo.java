@@ -1,4 +1,4 @@
-package JavaThreadConcept;
+package javaThreadConcept;
 import java.util.ArrayList;
 
 public class PCUsingWaitAndNotifyDemo {

@@ -1,4 +1,4 @@
-package JavaThreadConcept;
+package javaThreadConcept;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;

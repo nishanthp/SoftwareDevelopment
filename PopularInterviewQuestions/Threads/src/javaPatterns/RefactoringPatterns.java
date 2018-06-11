@@ -1,4 +1,4 @@
-package JavaPatterns;
+package javaPatterns;
 
 import java.util.Arrays;
 import java.util.Collections;

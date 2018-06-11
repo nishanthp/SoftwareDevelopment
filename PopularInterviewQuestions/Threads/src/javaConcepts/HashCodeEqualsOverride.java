@@ -1,4 +1,4 @@
-package JavaConcepts;
+package javaConcepts;
 
 public class HashCodeEqualsOverride {
 	public static void main(String[] args) {

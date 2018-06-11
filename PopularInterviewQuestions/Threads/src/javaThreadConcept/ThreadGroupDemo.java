@@ -1,8 +1,8 @@
-package JavaThreadConcept;
+package javaThreadConcept;
 
 import java.lang.reflect.GenericArrayType;
 
-public class MainClass3 {
+public class ThreadGroupDemo {
 	public static void main(String[] args) {
 		ThreadGroup g = new ThreadGroup("NewThread");
 		thread1 t1 = new thread1(g, "MyThread");

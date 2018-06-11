@@ -1,4 +1,4 @@
-package JavaThreadConcept;
+package javaThreadConcept;
 
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;

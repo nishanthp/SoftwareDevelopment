@@ -1,6 +1,6 @@
-package JavaThreadConcept;
+package javaThreadConcept;
 
-public class Main4 {
+public class ThreadDemo {
 	public static void main(String[] args) {
 	}
 }

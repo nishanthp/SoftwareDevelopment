@@ -1,7 +1,7 @@
-package JavaThreadConcept;
+package javaThreadConcept;
 import java.util.Date;
 
-public class MainClass {
+public class ThreadLocalDemo {
 	public static void main(String[] args) throws InterruptedException {
 		thread t1 = new thread();
 		thread t2 = new thread();

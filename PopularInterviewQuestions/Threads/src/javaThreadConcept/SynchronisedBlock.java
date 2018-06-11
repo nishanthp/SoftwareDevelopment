@@ -1,6 +1,6 @@
-package JavaThreadConcept;
+package javaThreadConcept;
 
-public class MainClass2 {
+public class SynchronisedBlock {
 	public static void main(String[] args) {
 		resource r = new resource();
 		object o = new object(r);
