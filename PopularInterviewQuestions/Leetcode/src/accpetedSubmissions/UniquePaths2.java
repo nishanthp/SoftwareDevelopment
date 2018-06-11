@@ -1,4 +1,4 @@
-package AccpetedSubmissions;
+package accpetedSubmissions;
 
 public class UniquePaths2 {
 	public static void main(String[] args) {

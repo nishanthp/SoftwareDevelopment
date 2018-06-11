@@ -1,4 +1,4 @@
-package AccpetedSubmissions;
+package accpetedSubmissions;
 
 import java.util.LinkedList;
 import java.util.List;

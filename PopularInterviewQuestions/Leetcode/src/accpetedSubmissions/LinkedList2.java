@@ -1,4 +1,4 @@
-package AccpetedSubmissions;
+package accpetedSubmissions;
 
 //Corner case [1,2,1]
 public class LinkedList2 {

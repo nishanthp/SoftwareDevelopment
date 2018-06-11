@@ -1,4 +1,4 @@
-package AccpetedSubmissions;
+package accpetedSubmissions;
 
 public class MinimumDepthOfATree {
 	public static void main(String[] args) {

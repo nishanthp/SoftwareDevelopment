@@ -1,4 +1,4 @@
-package AccpetedSubmissions;
+package accpetedSubmissions;
 
 public class IslandPerimeter {
 	public static void main(String[] args) {
