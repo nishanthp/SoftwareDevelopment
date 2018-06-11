@@ -1,4 +1,4 @@
-package PopularInProb;
+package popularInProb;
 
 public class OverlappingRectangle {
 	public static void main(String[] args) {

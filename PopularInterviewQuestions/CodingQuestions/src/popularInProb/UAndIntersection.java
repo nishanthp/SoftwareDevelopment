@@ -1,4 +1,4 @@
-package PopularInProb;
+package popularInProb;
 
 import java.util.HashSet;
 import java.util.Iterator;

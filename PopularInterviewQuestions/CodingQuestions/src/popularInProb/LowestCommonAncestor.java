@@ -1,4 +1,4 @@
-package PopularInProb;
+package popularInProb;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.concurrent.locks.Lock;

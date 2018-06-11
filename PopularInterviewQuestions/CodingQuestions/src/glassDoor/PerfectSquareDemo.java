@@ -1,4 +1,4 @@
-package GlassDoor;
+package glassDoor;
 
 public class PerfectSquareDemo {
 	public static void main(String[] args) {

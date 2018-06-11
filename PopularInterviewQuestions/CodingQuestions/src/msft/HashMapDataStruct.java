@@ -1,4 +1,4 @@
-package MSFT;
+package msft;
 
 import java.util.HashMap;
 

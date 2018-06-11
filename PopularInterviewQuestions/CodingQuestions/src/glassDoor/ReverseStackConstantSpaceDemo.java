@@ -1,4 +1,4 @@
-package GlassDoor;
+package glassDoor;
 
 import java.util.Stack;
 

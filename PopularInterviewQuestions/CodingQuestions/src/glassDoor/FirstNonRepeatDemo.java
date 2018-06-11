@@ -1,4 +1,4 @@
-package GlassDoor;
+package glassDoor;
 
 public class FirstNonRepeatDemo {
 	public static void main(String[] args) {

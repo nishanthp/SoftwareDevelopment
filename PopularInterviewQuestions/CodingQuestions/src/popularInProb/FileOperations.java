@@ -1,4 +1,4 @@
-package PopularInProb;
+package popularInProb;
 
 import java.io.File;
 import java.io.IOException;

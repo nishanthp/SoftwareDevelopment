@@ -1,4 +1,4 @@
-package PopularInProb;
+package popularInProb;
 
 import java.util.Stack;
 
@@ -16,8 +16,8 @@ public class UndoRedoDemo {
 }
 
 class BrokerUndoRedo {
-	private Stack<PopularInProb.Command> undoStack = new Stack<>();
-	private Stack<PopularInProb.Command> redoStack = new Stack<>();
+	private Stack<popularInProb.Command> undoStack = new Stack<>();
+	private Stack<popularInProb.Command> redoStack = new Stack<>();
 
 	public void type(String input) {
 		int i = 0;

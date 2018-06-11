@@ -1,4 +1,4 @@
-package PopularInProb;
+package popularInProb;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

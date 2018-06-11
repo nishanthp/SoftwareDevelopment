@@ -1,4 +1,4 @@
-package MSFT;
+package msft;
 
 public class ReverseDLLDemo {
 	public static void main(String[] args) {

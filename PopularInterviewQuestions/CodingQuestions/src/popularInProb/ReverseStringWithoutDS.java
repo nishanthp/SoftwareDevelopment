@@ -1,4 +1,4 @@
-package PopularInProb;
+package popularInProb;
 
 public class ReverseStringWithoutDS {
 	static String input = "this is paypal";

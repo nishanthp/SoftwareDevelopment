@@ -1,4 +1,4 @@
-package GlassDoor;
+package glassDoor;
 
 import java.net.Socket;
 import java.util.HashMap;

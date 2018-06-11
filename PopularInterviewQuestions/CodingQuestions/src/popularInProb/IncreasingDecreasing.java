@@ -1,4 +1,4 @@
-package PopularInProb;
+package popularInProb;
 
 public class IncreasingDecreasing {
 	static int math_max = 0;

@@ -1,4 +1,4 @@
-package PopularInProb;
+package popularInProb;
 
 public class RigthViewOfBinaryTree {
 	public static void main(String[] args) {
