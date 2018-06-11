@@ -1,4 +1,4 @@
-package Stack;
+package stack;
 
 public class FindMinNumberDemo {
 	static StringBuffer buffer = new StringBuffer();

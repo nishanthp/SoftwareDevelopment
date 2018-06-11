@@ -1,4 +1,4 @@
-package Stack;
+package stack;
 
 public class TowerofHanoiDemo {
 	// Without a special class for tower.
