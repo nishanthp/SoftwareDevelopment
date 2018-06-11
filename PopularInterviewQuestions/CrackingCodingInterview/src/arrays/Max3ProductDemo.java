@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class Max3ProductDemo {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 /**
  * Non adjacent - all positive integers.

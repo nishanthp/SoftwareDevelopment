@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 import org.omg.PortableInterceptor.INACTIVE;
 

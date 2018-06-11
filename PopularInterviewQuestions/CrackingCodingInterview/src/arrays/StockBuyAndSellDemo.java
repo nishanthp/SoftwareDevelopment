@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class StockBuyAndSellDemo {
 	public static void main(String[] args) {

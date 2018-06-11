@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class MaxProductArray {
 	int input[] = { 6, -3, -10, 0, 2 };

@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class PalindromePermDemo {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class SearchElementSortedRotatedArrayDemo {
 	public static void main(String[] args) {
