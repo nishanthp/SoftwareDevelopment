@@ -18,6 +18,7 @@ public class Permutation2 {
          return lists;
     }
     
+    ////Permutations with duplicates.
     public void permuteA(int[] nums, boolean[] used){
         if(list.size() > nums.length) return;
         if(list.size() == nums.length){

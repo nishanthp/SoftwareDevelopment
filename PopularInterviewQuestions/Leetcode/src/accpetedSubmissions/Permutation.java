@@ -16,7 +16,7 @@ public class Permutation {
         permuteA(nums);
         return lists;
     }
-    
+    //Permutations without duplicates.
     public void permuteA(int[] nums){
         if(list.size() > nums.length)return;
         if(list.size() == nums.length){
