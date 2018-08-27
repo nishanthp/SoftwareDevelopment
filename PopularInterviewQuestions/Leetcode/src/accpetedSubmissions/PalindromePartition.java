@@ -1,15 +1,12 @@
 package accpetedSubmissions;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 public class PalindromePartition {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Ran on leetcode.
 
 
 	}
@@ -32,8 +29,7 @@ public class PalindromePartition {
 	        }
 	        for(int i=start;i<s.length();i++){
 	            if(isPalindrome(s,start,i)){
-	                list.add(s.substring(start,i+1));
-	                
+	                list.add(s.substring(start,i+1));	                
 	                partition(s, i+1);
 	                list.remove(list.size()-1);
 	            }

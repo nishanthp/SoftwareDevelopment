@@ -2,23 +2,26 @@ package javaConcepts;
 
 public class EnumDemo {
 	public static void main(String[] args) {
-		for (UserStatus stauts : UserStatus.values()) {
-			// Can be converted to string too
-			System.out.println(stauts.toString());
-			//System.out.println(stauts);
-		}
+//		for (UserStatus stauts : UserStatus.values()) {
+//			// Can be converted to string too
+//			System.out.println(stauts.toString());
+//			//System.out.println(stauts);
+//		}
 
 		System.out.println(InstanceEnum.accepted.getUrl());
 		
-		System.out.println(Operation.PLUS.operation(1,2));
-		for(Operation op :Operation.values())
-		{
-			System.out.println(op);
-		}
-		
-		System.out.println(UserStatus.valueOf("pending"));
+//		System.out.println(Operation.PLUS.operation(1,2));
+//		for(Operation op :Operation.values())
+//		{
+//			System.out.println(op);
+//		}
+//		
+//		System.out.println(UserStatus.valueOf("pending"));
 		//Below statement does not work. InstanceEnum.valueOf("pending") gives InstanceEnum.pending not a string.
 		//String p = InstanceEnum.valueOf("pending");
+		
+		System.out.println(Suit.Club.getNumber());
+		System.out.println(Suit.Heart.getStr());
 	}
 }
 
@@ -57,5 +60,28 @@ enum Operation {
 		default:
 			return -1;
 		}
+	}
+}
+
+
+enum Suit{
+	Diamond(0), Spade(1), Club(2), Heart("3");
+	
+	int num;
+	String s; 
+	private Suit(int number){
+		this.num = number;
+	}
+	
+	private Suit(String str){
+		this.s = str;
+	}
+	
+	public int getNumber(){
+		return this.num;
+	}
+	
+	public String getStr(){
+		return this.s;
 	}
 }

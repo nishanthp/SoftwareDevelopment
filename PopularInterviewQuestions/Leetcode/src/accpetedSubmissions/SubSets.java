@@ -8,6 +8,9 @@ public class SubSets {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
+		int [] nums = {1,2,3,4,5};
+		SubSets s = new SubSets();
+		s.subsetsWithDup(nums);
 
 	}
 	// Works for both duplicates and non duplicates.
@@ -28,9 +31,18 @@ public class SubSets {
         }
         for(int i=start; i< nums.length; i++){
             list.add(nums[i]);
+            printList(list);
             subSets(nums, i+1);
             list.remove(list.size()-1);
         }
     }
+
+	private void printList(List<Integer> list2) {
+		for(Integer n : list2){
+			System.out.print(n);
+		}
+		System.out.println();
+		
+	}
 
 }
