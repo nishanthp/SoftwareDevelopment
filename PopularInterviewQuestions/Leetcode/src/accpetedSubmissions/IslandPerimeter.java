@@ -2,7 +2,7 @@ package accpetedSubmissions;
 
 public class IslandPerimeter {
 	public static void main(String[] args) {
-		// Ran on leetcode.
+		// Ran on leetcode. TC - O(r*c)
 	}
 
 	public int islandPerimeter(int[][] grid) {

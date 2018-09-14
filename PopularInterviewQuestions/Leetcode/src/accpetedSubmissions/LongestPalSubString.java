@@ -3,7 +3,7 @@ package accpetedSubmissions;
 public class LongestPalSubString {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Ran on leetcode.
 
 	}
 	// this is continous.

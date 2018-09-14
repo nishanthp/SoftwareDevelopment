@@ -11,6 +11,7 @@ public class CombinationSum {
 	}
 	
 	// backtracking example for an array. recursion for every element in the array. So recurssion within a for loop.
+	//O(n+k)! I dont know how??
 	List<List<Integer>> lists = new LinkedList<>();
     List<Integer> list = new LinkedList<Integer>();
 

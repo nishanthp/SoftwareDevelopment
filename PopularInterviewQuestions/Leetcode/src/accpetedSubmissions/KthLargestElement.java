@@ -3,7 +3,7 @@ package accpetedSubmissions;
 public class KthLargestElement {
 
 	public static void main(String[] args) {
-		// Ran on leetcode.
+		// Ran on leetcode. TC O(n^2) - bad pivot, avg O(n).
 		int [] nums = {3,2,1,5,6,4};
 		int k=1;
 		findKthLargest(nums, k);
