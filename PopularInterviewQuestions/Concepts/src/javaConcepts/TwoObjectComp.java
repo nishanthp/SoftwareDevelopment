@@ -8,7 +8,24 @@ import java.util.concurrent.ArrayBlockingQueue;
 public class TwoObjectComp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		// String compare. 
+		String s5 = "abc";
+		String s6 = "abc";
+		/* This is true. This is a complier optimization. 
+		checks both the strings have the same value so uses one string object. 
+		It is safe as the strings are immutable. Name 'string pool' comes from the idea that all already 
+		defined string(s) are stored in some 'pool' and 
+		before creating new String object compiler checks if such string is already defined.*/
+		System.out.println(s5==s6);
+		
+		String s3 = new String("abc");
+		String s4 = new String("abc");
+		// This is false. References are being compared, so they are not same.
+		System.out.println(s3 == s4);
+		//This is true.
+		System.out.println(s3.equals(s4));
+		
 		Point p1 = new Point(2, 3);
 		Point p2 = new Point(2, 3);
 		
@@ -42,11 +59,13 @@ class Point {
 		this.c = c;
 		this.r =r;
 	}
+	// Compare two objects using the below objects.
 	@Override
 	 public boolean equals(Object point) {
 		Point p = (Point) point;
 		return this.r == p.r && this.c == p.c;
 	}
+	// Used by the hashMap data structure to put different objects within the same key.
 	@Override 
 	public int hashCode(){
 		return r*c;
