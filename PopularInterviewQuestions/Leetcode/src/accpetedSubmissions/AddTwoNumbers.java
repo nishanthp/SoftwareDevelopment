@@ -4,7 +4,6 @@ public class AddTwoNumbers {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-
 	}
 	
 	// Do iteratively. As opposed to recursive solution. (Input numbers are already reversed.)
