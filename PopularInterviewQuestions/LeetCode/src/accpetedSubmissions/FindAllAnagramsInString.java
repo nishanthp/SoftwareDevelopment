@@ -8,7 +8,6 @@ public class FindAllAnagramsInString {
 	public static void main(String[] args) {
 		// Ran on leetcode.
 
-		List<Boolean>
 	}
 	
 	// this is a template for all *****substring/sliding window******* problems.

@@ -1,9 +1,12 @@
 package accpetedSubmissions;
 
+import java.util.ArrayDeque;
+
 public class PermutationInString {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
+		ArrayDeque<E>
 
 	}
 	

@@ -4,6 +4,7 @@ public class ReverseString2 {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
+		
 
 	}
 	// Not commly asked question. Can ignore.
