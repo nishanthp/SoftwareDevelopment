@@ -6,8 +6,6 @@ public class PermutationInString {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-		ArrayDeque<E>
-
 	}
 	
 	// This could have been implemented with a hashmap or a hashSet too.
