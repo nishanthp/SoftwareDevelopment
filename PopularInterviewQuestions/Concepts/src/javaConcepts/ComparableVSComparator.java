@@ -52,11 +52,11 @@ public class ComparableVSComparator {
 		
 		
 		HashMap<Integer, Integer> m12 = new HashMap<>();
-		m12.put(2, 5);
-		m12.put(7, 4);
-		m12.put(3, 3);
-		m12.put(1, 2);
-		m12.put(5, 1);
+		m12.put(3, 1);
+		m12.put(4, 1);
+		m12.put(5, 2);
+		//m12.put(5, 2);
+		m12.put(12, 3);
 		
 		
 		TreeMap<Integer, Integer> treeMap = new TreeMap<Integer,Integer>(new Comp(m12));
@@ -86,7 +86,9 @@ class Comp implements Comparator<Integer>{
 	}
 	@Override
 	public int compare(Integer o1, Integer o2) {
-		return map.get(o2).compareTo(map.get(o1));
+		int ret = map.get(o2).compareTo(map.get(o1));
+		if (ret !=0) return ret;
+		else return o2.compareTo(o1);
 	}
 	
 }
