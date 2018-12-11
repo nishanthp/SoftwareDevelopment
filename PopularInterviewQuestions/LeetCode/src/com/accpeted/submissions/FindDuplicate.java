@@ -1,10 +1,10 @@
 package com.accpeted.submissions;
 
+
 public class FindDuplicate {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-
 	}
 	
 	// binary search based on range. low,high and mid need not be a part of the array.
@@ -23,4 +23,9 @@ public class FindDuplicate {
         }
         return low;
     }
+}
+
+
+class Interval{
+	
 }
