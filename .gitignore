@@ -14,3 +14,7 @@
 #Database and Logs
 *.log
 *.sql
+
+
+#Metadata files
+.metadata
