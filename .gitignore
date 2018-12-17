@@ -1,1 +1,18 @@
-bin/
+#Complied Sources
+*.class
+*.pyc
+*.com
+*.exe
+*.o
+
+#Packages
+*.tar
+*.zip
+*.rar
+
+#Database and Logs
+*.log
+*.sql
+
+#Metadata files
+.metadata
