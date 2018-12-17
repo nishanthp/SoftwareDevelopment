@@ -24,8 +24,3 @@ public class FindDuplicate {
         return low;
     }
 }
-
-
-class Interval{
-	
-}
