@@ -16,6 +16,10 @@ public class Conversions {
 		char n = '1';
 		int actualNum = Integer.valueOf(n+"");
 		System.out.println(actualNum);
+		
+		int n1 = 3;
+		char  ch1 = Character.forDigit(n1,10);
+		System.out.println(ch1);
 
 	}
 
