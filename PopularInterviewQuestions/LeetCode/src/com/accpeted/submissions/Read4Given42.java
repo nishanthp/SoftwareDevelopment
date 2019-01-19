@@ -23,7 +23,7 @@ public class Read4Given42 {
        } 
         return counter;
     }
-    
+  
     private int read4(char[] temp) {
 		// Leetcode API.
 		return 0;
