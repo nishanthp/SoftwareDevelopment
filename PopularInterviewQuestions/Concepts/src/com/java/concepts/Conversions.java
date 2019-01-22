@@ -20,6 +20,9 @@ public class Conversions {
 		int n1 = 3;
 		char  ch1 = Character.forDigit(n1,10);
 		System.out.println(ch1);
+		
+		int numReq = 144;
+		System.out.println(String.valueOf(numReq));
 
 	}
 
