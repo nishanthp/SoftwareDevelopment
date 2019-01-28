@@ -1,5 +1,9 @@
 package com.accpeted.submissions;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+
 public class UniqueEmailAddress {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-LeetCode/src/com/accpeted/submissions/Read4Given42.javapackage com.accpeted.submissions;
+package com.accpeted.submissions;
 
 public class RepeatedStringMatch {
 

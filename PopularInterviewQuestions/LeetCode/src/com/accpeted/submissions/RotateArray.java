@@ -5,11 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class RotateArray {
-
+	List<List<Integer>> list = new LinkedList<>();
 	public static void main(String[] args) {
 		// Ran both on leetcode.
-		List<List<Integer>> list = new LinkedList<>();
-		list.get(0).get(1);
 	}
 	
 	//This is without extra space.
@@ -62,8 +60,8 @@ public class RotateArray {
 	        for(int i=0;i<prerequisites.length;i++){
 	            if(index == i) continue;
 	            if(prerequisites[i][0] == curr[1] && prerequisites[i][1] == curr[0]) return false;
-	            list.add(Arrays.asList(curr));
-	            list.add(Arrays.asList(prerequisites[i]));
+//	            list.addAll(Arrays.asList(curr));
+//	            list.addAll(Arrays.asList(prerequisites[i]));
 	            if (can(numCourses, prerequisites, courseTaken, index++)) {
 	                return true;
 	            }   
