@@ -19,10 +19,15 @@ public class Conversions {
 		
 		int n1 = 3;
 		char  ch1 = Character.forDigit(n1,10);
+		int val = Character.getNumericValue('A');
+		System.out.println("val "+val);
 		System.out.println(ch1);
 		
 		int numReq = 144;
 		System.out.println(String.valueOf(numReq));
+		
+		char ch2 = Character.valueOf('a');
+		System.out.println(ch2);
 
 	}
 
