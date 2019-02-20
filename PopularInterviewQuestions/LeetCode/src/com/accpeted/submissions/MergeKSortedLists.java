@@ -1,5 +1,7 @@
 package com.accpeted.submissions;
 
+import java.util.PriorityQueue;
+
 public class MergeKSortedLists {
 
 	public static void main(String[] args) {
