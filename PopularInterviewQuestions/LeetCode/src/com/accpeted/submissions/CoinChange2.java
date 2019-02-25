@@ -15,7 +15,8 @@ public class CoinChange2 {
 	        int[][] matrix = new int[coins.length+1][amount+1];
 	        
 	        for(int i=0;i<matrix.length;i++){
-	            matrix[i][0] = 1;
+	            matrix[i][0] = 1; //this is the confusing part. The number of ways you can make 
+	                  			  // 0 amount with any denominations is 0.
 	        }
 	        for(int i=1;i<matrix.length;i++){
 	            for(int j=1;j<matrix[0].length;j++){
