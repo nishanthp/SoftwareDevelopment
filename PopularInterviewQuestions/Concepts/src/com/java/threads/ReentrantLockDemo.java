@@ -31,6 +31,8 @@ class ThreadDe extends Thread {
 }
 
 class ObjectDemo {
+	// This is unstructured unlike synchronized block.
+	// Can be used accross methods.
 	ReentrantLock lock = new ReentrantLock(true);
 	int objectValue;
 

@@ -38,12 +38,14 @@ public class SerializeDeserialize {
         return deserializeTree(dended);
     }
     
+    
     public TreeNode deserializeTree(Deque<String> data) {
+    	// this way you can avoid to pass the index to keep track.
         String curretNode = data.remove();
         if(curretNode.equals("null")) {
             return null;
         }
-            TreeNode root = new TreeNode(Integer.parseInt(curretNode));
+            TreeNode root = new TreeNode(Integer.valueOf(curretNode));
             root.left = deserializeTree(data);
             root.right = deserializeTree(data);
             return root;

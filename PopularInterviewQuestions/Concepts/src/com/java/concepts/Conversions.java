@@ -26,7 +26,7 @@ public class Conversions {
 		int numReq = 144;
 		System.out.println(String.valueOf(numReq));
 		
-		char ch2 = Character.valueOf('a');
+		char ch2 = Character.valueOf('1');
 		System.out.println(ch2);
 
 	}

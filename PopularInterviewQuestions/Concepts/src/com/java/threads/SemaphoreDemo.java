@@ -8,9 +8,12 @@ public class SemaphoreDemo {
 		Thread_3 t1 = new Thread_3(sem);
 		Thread_3 t2 = new Thread_3(sem);
 		Thread_3 t3 = new Thread_3(sem);
+		// will create a new thread and then execute the run method. 
 		t1.start();
-		t2.start();
+		// will execute the run method on the same thread.
+		t2.run();
 		t3.start();
+
 	}
 }
 

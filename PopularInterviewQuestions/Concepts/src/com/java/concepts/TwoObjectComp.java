@@ -59,7 +59,7 @@ class Point {
 		this.c = c;
 		this.r =r;
 	}
-	// Compare two objects using the below objects.
+	// Compare two objects using the below objects. Used by hashmap too.
 	@Override
 	 public boolean equals(Object point) {
 		Point p = (Point) point;

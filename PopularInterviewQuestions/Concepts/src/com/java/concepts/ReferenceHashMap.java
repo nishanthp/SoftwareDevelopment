@@ -13,6 +13,16 @@ public class ReferenceHashMap {
 		if(referenceMap.containsKey(nums2)){
 			System.out.println("keys are compared by reference");
 		}
+		
+		
+		// A JVM optimization.
+		String s1 = "abc";
+		String s2 = "abc";
+		IdentityHashMap<String, Integer> referenceStringMap = new IdentityHashMap<>();
+		referenceStringMap.put(s1, 1);
+		referenceStringMap.put(s2, 2);
+		
+		System.out.println(referenceStringMap.size());
 
 	}
 	

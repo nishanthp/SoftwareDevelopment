@@ -17,7 +17,7 @@ public class InterfaceDemo {
 		ArrayList<demo> year = new ArrayList<>();
 		year.add(d);
 		year.add(d1);
-
+		System.out.println(d.getString());
 		for (demo each : year) {
 			for (Integer day : each.days) {
 				System.out.println(day);
@@ -28,7 +28,9 @@ public class InterfaceDemo {
 }
 
 interface demo {
+	// they are static and final. Can access them, but cannot set them.
 	ArrayList<Integer> days = new ArrayList<>();
+	String s = "abc";
 }
 
 class d1 implements demo {
@@ -41,6 +43,10 @@ class d1 implements demo {
 	 */
 	public ArrayList<Integer> getDays() {
 		return demo.days;
+	}
+	
+	public String getString() {
+		return demo.s;
 	}
 
 	/*

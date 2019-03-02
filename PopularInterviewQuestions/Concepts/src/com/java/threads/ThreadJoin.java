@@ -8,7 +8,8 @@ public class ThreadJoin {
 		t1.start();
 		t1.join();
 		t2.start();
-		// t2.join();
+		// Join is used to bring order to the way threads are executed or run.
+		t2.join();
 		t3.start();
 		// t3.join();
 	}

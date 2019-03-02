@@ -31,7 +31,6 @@ public class BSTIterator {
     /** @return the next smallest number */
     public int next() {
         TreeNode currNode = stack.pop();
-        System.out.println(currNode.val);
         if(currNode.right != null) {
             TreeNode rightNode = currNode.right;
             while(rightNode != null){

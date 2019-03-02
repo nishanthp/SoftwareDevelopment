@@ -10,13 +10,13 @@ public class ClassInner {
 	}
 
 	class A extends ClassInner {
-		class B {
-			
-		}
 	}
 	
 	
 	class C {
 		
 	}
+
 }
+
+

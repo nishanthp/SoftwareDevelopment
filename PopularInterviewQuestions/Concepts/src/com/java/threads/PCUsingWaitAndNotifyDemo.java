@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class PCUsingWaitAndNotifyDemo {
 	public static Boolean available = false;
+	// make object hold a list. can eliminate boolean available.
 	public static Object12 ob12 = new Object12();
 
 	public static void main(String[] args) {

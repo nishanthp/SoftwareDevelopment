@@ -6,11 +6,14 @@ public class SynchronisedBlock {
 		object o = new object(r);
 		o.start();
 		System.out.println("HOLDS LOCK" + object.holdsLock(r));
-		// new Thread(new object(r)).start();
+		
+		Object2 ob2 = new Object2(r);
+		ob2.start();
 
 	}
 }
 
+// Thread implements Runnable interface.
 class object extends Thread {
 	resource res;
 
@@ -24,6 +27,17 @@ class object extends Thread {
 			System.out.println(holdsLock(this.res));
 			this.res.display();
 		}
+	}
+}
+
+class Object2  extends Thread {
+	resource res1;
+	public Object2(resource r) {
+		this.res1 = r ;
+	}
+	@Override
+	public synchronized void run() {
+		this.res1.display();
 	}
 }
 

@@ -35,6 +35,7 @@ enum InstanceEnum {
 
 	private String url;
 
+	// Only private constructor is permitted. NO public constructor for enum.
 	private InstanceEnum(String url) {
 		this.url = url;
 	}
@@ -65,6 +66,7 @@ enum Operation {
 
 
 enum Suit{
+	// supports different value types.
 	Diamond(0), Spade(1), Club(2), Heart("3");
 	
 	int num;

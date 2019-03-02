@@ -29,6 +29,7 @@ public class FindAllAnagramsInString {
 	     while(right < s.length()){
 	         if(hash[s.charAt(right++)]-- >= 1) count--;
 	         if(count == 0) result.add(left);
+	         // redo with while loop.
 	         if(right-left == pl && hash[s.charAt(left++)]++ >=0) count++;
 	     }
 	        return result;

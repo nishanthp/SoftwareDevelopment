@@ -9,7 +9,7 @@ public class PriorityQueueD {
 		// offer: adds
 		// peek: head of head, does not remove it
 		// poll: removes head of heap.
-		// by default min head. Pass comparator to make it maxHeap.
+		// by default min heap. Pass comparator to make it maxHeap.
 		PriorityQueue<Integer> minHeap = new PriorityQueue();
 		minHeap.offer(10);
 		minHeap.offer(-2);

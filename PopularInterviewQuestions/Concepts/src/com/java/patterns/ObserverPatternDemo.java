@@ -11,7 +11,9 @@ public class ObserverPatternDemo {
 	}
 }
 
+
 abstract class Observer {
+	// cannot use an interface as the the memeber variables of interface are static and final.
 	Subject subject;
 
 	public abstract void update();

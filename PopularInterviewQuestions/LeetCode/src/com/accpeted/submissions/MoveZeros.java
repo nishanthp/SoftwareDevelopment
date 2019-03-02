@@ -9,18 +9,18 @@ public class MoveZeros {
 	
 	// a tricky problem 
 	public void moveZeroes(int[] nums) {
-        int start = 0;
-        int current = 0;
-        while(current < nums.length){
+        int left = 0;
+        int right = 0;
+        while(right < nums.length){
         	// This is the important part to maintain relavent position of non-zeros elements in the array.
-            if(nums[current] != 0) {
+            if(nums[right] != 0) {
                 //swap
-                int temp = nums[current];
-                nums[current] = nums[start];
-                nums[start] = temp;
-                start +=1;
+                int temp = nums[right];
+                nums[right] = nums[left];
+                nums[left] = temp;
+                left +=1;
             }
-            current +=1;
+            right +=1;
         }
     }
 

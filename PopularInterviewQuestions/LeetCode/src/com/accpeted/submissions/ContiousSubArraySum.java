@@ -19,18 +19,12 @@ public class ContiousSubArraySum {
 			}
 		};
 
-		// for (Entry<Integer, Integer> entry : remainders.entrySet()) {
-		// System.out.println(entry.getKey() + "Coming till here " +
-		// entry.getValue());
-		// }
-
 		for (int i = 0; i < nums.length; i++) {
 			sumSoFar += nums[i];
 			if (k != 0)
 				sumSoFar %= k;
 			// Have seen this remainder more than once.
 			if (remainders.get(sumSoFar) != null) {
-				// System.out.println(remainders.get(sumSoFar) + " " + i);
 				if (i - remainders.get(sumSoFar) > 1) {
 					return true;
 				}
