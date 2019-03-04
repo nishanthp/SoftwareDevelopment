@@ -13,7 +13,7 @@ public class SynchronisedBlock {
 	}
 }
 
-// Thread implements Runnable interface.
+// Thread can implement Runnable/Callable interface too.
 class object extends Thread {
 	resource res;
 
@@ -41,7 +41,7 @@ class Object2  extends Thread {
 	}
 }
 
-class resource {
+class resource extends Object{
 	public void display() {
 		System.out.println("This is resource obejct");
 	}
