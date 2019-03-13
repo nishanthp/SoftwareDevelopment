@@ -1,11 +1,13 @@
 package com.accpeted.submissions;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class RedundantConnection {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
+		HashMap<Integer, Integer> map = new HashMap<>();
 
 	}
 	
