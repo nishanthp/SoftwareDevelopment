@@ -34,6 +34,11 @@ public class TwoObjectComp {
 		String s = "fef"+ 'c';
 		System.out.println(s);
 		
+		// Below are unicode characters(Super set of ascii and ascii extended).
+		// Could come up during string related interview questions.
+		String cross = "\ud800\udc35";
+		String cross2 = "\ud800\udc35";
+		
 		HashSet<Point> s1 = new HashSet<Point>();
 		s1.add(p1);
 		s1.add(p2);
@@ -45,6 +50,7 @@ public class TwoObjectComp {
 		ArrayList<Point>  wew = new ArrayList<Point>();
 		wew.add(p1);
 		System.out.println(wew.contains(new Point(2,3)));
+		
 	}
 	
 
