@@ -13,7 +13,6 @@ public class SemaphoreDemo {
 		// will execute the run method on the same thread.
 		t2.run();
 		t3.start();
-
 	}
 }
 

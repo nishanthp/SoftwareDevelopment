@@ -8,6 +8,8 @@ public class PublicPrivate {
 		System.out.println(n1.getterPrivate());
 		N2 n2 = new N2();
 		System.out.println(n2.x);
+		String s = "fefw";
+		s.intern();
 	}
 
 }
