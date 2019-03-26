@@ -7,7 +7,6 @@ public class GenerateParentheses {
 
 	public static void main(String[] args) {
 		// Ran on leetcode
-
 	}
 	
 	List<String> result = new LinkedList<String>();
