@@ -31,3 +31,19 @@ public class RomanToInteger {
     }
 
 }
+
+abstract class Exam {
+String name = "";
+String id ="";
+public Exam(String name, String id){
+	this.name = name;
+	this.id = id;
+}
+}
+
+
+class E1 extends Exam {
+	E1(String name, String id){
+		super(name, id);
+	}
+}

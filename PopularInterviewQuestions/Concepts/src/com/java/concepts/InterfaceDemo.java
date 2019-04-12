@@ -29,6 +29,7 @@ public class InterfaceDemo {
 
 interface demo {
 	// they are static and final. Can access them, but cannot set them.
+	// This could be one of the reasons to use abstract class or vice versa.
 	ArrayList<Integer> days = new ArrayList<>();
 	String s = "abc";
 }
