@@ -8,7 +8,7 @@ public class SubSets {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-		int [] nums = {1,2,3,4,5};
+		int [] nums = {1,3,5};
 		SubSets s = new SubSets();
 		s.subsetsWithDup(nums);
 

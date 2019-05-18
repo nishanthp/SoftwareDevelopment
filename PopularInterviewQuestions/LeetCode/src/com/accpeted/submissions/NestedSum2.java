@@ -9,9 +9,42 @@ public class NestedSum2 {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
+		List<Integer> all = new LinkedList<Integer>();
+		List<Integer> all2 = new LinkedList<Integer>();
+		all.addAll(all2);
 
 	}
 	
+	// 1st approach using DFS. This solution is straight forward.
+	List<Integer> sums = new LinkedList<Integer>();
+    int level = 0;
+   public int depthSumInverseDFS(List<NestedInteger> nestedList) {
+       depthSumInverseDFS(nestedList, level);
+       int j = 0;
+       int totalSum = 0;
+       level = sums.size();
+       for(int eachSum : sums){
+           totalSum += eachSum * level;
+           level--;
+           if(level == 0) break;
+       }
+       return totalSum;
+   }
+   
+   public void depthSumInverseDFS(List<NestedInteger> nestedList, int level) {
+       if(level >= sums.size()) sums.add(0);
+       int levelSum = 0;
+       for(NestedInteger each : nestedList){
+           if (each.isInteger()) levelSum += each.getInteger();
+           else depthSumInverseDFS(each.getList(), level+1);
+       }
+       levelSum +=  sums.get(level);
+       sums.set(level, levelSum);
+       return;
+   }
+	
+   
+    // This is second approach using BFS. Not straight forward.
 	int totalSum = 0;
     int prevSum = 0;
     public int depthSumInverse(List<NestedInteger> nestedList) {
