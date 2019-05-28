@@ -12,7 +12,7 @@ public class MoveZeros {
         int left = 0;
         int right = 0;
         while(right < nums.length){
-        	// This is the important part to maintain relavent position of non-zeros elements in the array.
+        	// This is the important part to maintain relevant position of non-zeros elements in the array.
             if(nums[right] != 0) {
                 //swap
                 int temp = nums[right];

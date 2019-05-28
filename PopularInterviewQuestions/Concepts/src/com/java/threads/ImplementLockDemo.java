@@ -7,7 +7,7 @@ public class ImplementLockDemo {
 
 }
 
-// implemnets a lock using synchronised method.
+// implements a lock using synchronized method.
 class ReadWriteLock  {
 	Object lock;
 	boolean writer = false;

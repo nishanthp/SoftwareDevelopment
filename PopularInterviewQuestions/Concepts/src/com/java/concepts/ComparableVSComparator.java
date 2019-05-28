@@ -60,6 +60,21 @@ public class ComparableVSComparator {
 		
 		
 		TreeMap<Integer, Integer> treeMap = new TreeMap<Integer,Integer>(new Comp(m12));
+		
+		// For a anonymous class a constructor cannot be defined. 
+		// Which is why line 97 to 109.
+//		TreeMap<Integer, Integer> treeMap1 = new TreeMap<Integer,Integer>(new Comparator<Integer>(m12) {
+//			HashMap<Integer, Integer> map = new HashMap<>();
+//			{
+//			this.map = m12;
+//			}
+//			@Override
+//			public int compare(Integer o1, Integer o2) {
+//				// TODO Auto-generated method stub
+//				return o1.compareTo(o2);
+//			}
+//		
+//		};
 		treeMap.putAll(m12);
 		
 		for(Entry<Integer, Integer> ent: treeMap.entrySet()){

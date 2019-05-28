@@ -7,6 +7,9 @@ public class ThreadGroupDemo {
 		ThreadGroup g = new ThreadGroup("NewThread");
 		thread1 t1 = new thread1(g, "MyThread");
 		boolean interrupt = t1.isInterrupted();
+//		Thread r1 = new Thread(t1); // another way to create threads.
+//		r1.start();
+		
 		thread1.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
 
 			@Override

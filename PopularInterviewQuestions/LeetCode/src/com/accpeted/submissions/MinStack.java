@@ -6,13 +6,13 @@ import java.util.LinkedList;
 public class MinStack {
 
 	public static void main(String[] args) {
-		// Ran on leetcode.s
+		// Ran on leetcode.
 
 	}
 	
 	// There are multiple ways to solve this. 
 	Deque<Integer> stack;
-    int glabalMin = Integer.MAX_VALUE;
+    int globalMin = Integer.MAX_VALUE;
     /** initialize your data structure here. */
     
     public MinStack() {
@@ -20,17 +20,17 @@ public class MinStack {
     }
     
     public void push(int x) {
-         if(x<=glabalMin){
+         if(x<=globalMin){
         	// This is the trick.
-             stack.push(glabalMin);
-             glabalMin = x;
+             stack.push(globalMin);
+             globalMin = x;
          }
         stack.push(x);
     }
     
     public void pop() {
     	// This one too.
-       if(stack.pop() == glabalMin) glabalMin = stack.pop();
+       if(stack.pop() == globalMin) globalMin = stack.pop();
     }
     
     public int top() {
@@ -38,7 +38,7 @@ public class MinStack {
     }
     
     public int getMin() {
-        return glabalMin;
+        return globalMin;
     }
 
 }

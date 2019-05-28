@@ -17,18 +17,34 @@ public class Conversions {
 		int actualNum = Integer.valueOf(n+"");
 		System.out.println(actualNum);
 		
+		int numReq = 144;
+		String numReqStr = String.valueOf(numReq);
+		System.out.println(numReqStr);
+		
+		// This is important.
 		int n1 = 3;
 		char  ch1 = Character.forDigit(n1,10);
-		int val = Character.getNumericValue('A');
-		System.out.println("val "+val);
 		System.out.println(ch1);
 		
-		int numReq = 144;
-		System.out.println(String.valueOf(numReq));
+		// This could be done too. If you pass just the object, it throws the address of
+		// the object back.
+		M m = new M();
+		String s = String.valueOf(m.s);
+		System.out.println(":"+ s);
 		
+		// This is auto boxing.
 		char ch2 = Character.valueOf('1');
 		System.out.println(ch2);
 
+		
+		int val = Character.getNumericValue('A');
+		System.out.println("val "+val);
+		
+
 	}
 
+}
+
+class M {
+	String s = "afwef";
 }

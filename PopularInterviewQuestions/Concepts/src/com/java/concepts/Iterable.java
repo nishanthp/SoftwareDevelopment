@@ -5,12 +5,10 @@ import java.util.Iterator;
 public class Iterable {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 
 }
-
 
 class IwantTeration implements Iterator<Integer>{
 

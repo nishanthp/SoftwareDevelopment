@@ -4,6 +4,7 @@ import java.util.concurrent.Semaphore;
 
 public class SemaphoreDemo {
 	public static void main(String[] args) {
+		// A mutex in java is created with a semaphore of size 1.
 		Semaphore sem = new Semaphore(4);
 		Thread_3 t1 = new Thread_3(sem);
 		Thread_3 t2 = new Thread_3(sem);

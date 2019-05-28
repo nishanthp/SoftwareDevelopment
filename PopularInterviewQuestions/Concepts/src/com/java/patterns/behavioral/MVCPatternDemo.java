@@ -1,4 +1,4 @@
-package com.java.patterns;
+package com.java.patterns.behavioral;
 
 public class MVCPatternDemo {
 	public static void main(String[] args) {

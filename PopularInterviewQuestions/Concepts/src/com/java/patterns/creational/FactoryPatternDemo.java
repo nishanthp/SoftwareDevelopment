@@ -1,4 +1,4 @@
-package com.java.patterns;
+package com.java.patterns.creational;
 
 public class FactoryPatternDemo {
 	public static void main(String[] args) {

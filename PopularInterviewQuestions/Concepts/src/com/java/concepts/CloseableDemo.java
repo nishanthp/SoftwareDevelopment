@@ -29,7 +29,7 @@ class Learning implements Closeable{
 
 	@Override
 	public void close() throws WebServiceException {
-		// TODO Auto-generated method stub
+		// Used to release the system resources associated with this stream.
 		
 	}
 }

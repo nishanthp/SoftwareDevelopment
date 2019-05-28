@@ -11,7 +11,6 @@ public class ConsumerProducerProblem {
 		Consumer1 cThread = new Consumer1(s);
 		pThread.start();
 		cThread.start();
-
 	}
 
 }
@@ -23,6 +22,7 @@ class Producer1 extends Thread {
 	}
 
 	public void run() {
+		while(true) {
 		synchronized (this.s) {
 			while(this.s.list.size() == 5) {
 				try {
@@ -32,9 +32,13 @@ class Producer1 extends Thread {
 				}
 		}
 			int index = 0;
-		while(this.s.list.size() <5) this.s.list.add(index++);	
+		while(this.s.list.size() <5) {
+			System.out.println("adding to subject list "+ index);
+			this.s.list.add(index++);	
+			}
 		this.s.notify();
 		}
+	}
 }
 }
 
@@ -45,9 +49,12 @@ class Consumer1 extends Thread {
 	}
 
 	public void run() {
+		while(true) {
 		synchronized (this.s) {
 			while(this.s.list.size() == 0) {
 				try {
+				// releases the object monitor and goes to sleep. continues to the next line, only
+				// when it is notified.
 				this.s.wait();
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -55,11 +62,14 @@ class Consumer1 extends Thread {
 			}
 				}
 			while(this.s.list.size() > 0) {
-				System.out.println(this.s.list.get(this.s.list.size()-1));
-				this.s.list.remove(this.s.list.size()-1);
+				System.out.println("Removing from the subject list " + this.s.list.remove(this.s.list.size()-1));
 			}
+			// Will make all the threads that called wait on this object monitor to wake up (runnable state).
+			// However, it does NOT release the object monitor (object lock). Only after the execution of 
+			// synchronized block is complete, the object monitor is released. 
 			this.s.notify();
 		}	
+	}
 	}
 }
 

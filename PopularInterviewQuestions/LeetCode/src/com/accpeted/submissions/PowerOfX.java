@@ -16,7 +16,7 @@ public class PowerOfX {
             int mid = (low+high)/2;
             if(mid <= x/mid) {
                 low=mid+1;
-                // this is the tricky part. Keep assigning res if mid <= x, till low converges with high.
+                // this is the tricky part. Keep reassigning res if mid <= x, till low converges with high.
                 res =  mid;
             }
             else high = mid-1;

@@ -65,4 +65,17 @@ class Thread_1 implements Callable<Boolean> {
 	}
 }
 
+class Thread_2 implements Runnable{
+
+	// Cannot throw an exception and cannot return a result.
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+
+
 

@@ -1,4 +1,4 @@
-package com.java.patterns;
+package com.java.patterns.behavioral;
 
 import java.util.ArrayList;
 

@@ -31,7 +31,7 @@ class Demo1 {
 	public Demo1() {
 		
 	}
-	public static synchronized void classLevel() {
+	public static final synchronized void classLevel() {
 		System.out.println("Class level method.");
 	}
 	

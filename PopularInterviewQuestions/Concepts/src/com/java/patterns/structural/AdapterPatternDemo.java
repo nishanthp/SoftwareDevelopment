@@ -1,4 +1,4 @@
-package com.java.patterns;
+package com.java.patterns.structural;
 
 public class AdapterPatternDemo {
 	public static void main(String[] args) {

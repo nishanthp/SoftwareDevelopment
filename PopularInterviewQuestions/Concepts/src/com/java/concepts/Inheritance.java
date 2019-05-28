@@ -43,14 +43,15 @@ class B extends A{
 	B(){
 		
 	}
+	@Override
 	public void thisIsPublic() {
 		System.out.println("thisIsPublic in B");
 	}
-	
+	// @Override - NOT AN OVERRIDE.
 	private void thisIsPrivate() {
 		System.out.println("thisIsPrivate in B");
 	}
-	
+	// @Override - NOT AN OVERRIDE.
 	public static void thisIsStatic() {
 		System.out.println("thisIsStatic in B");
 	}
