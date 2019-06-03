@@ -8,14 +8,13 @@ public class HouseRobberArray {
 	}
 	
 	public int rob(int[] nums) {
-        int prev = 0;
-        int prev_prev = 0;
-        for(int num : nums){
-            int temp = prev;
-            prev = Math.max(prev_prev+num, prev);
-            prev_prev = temp;
+        if(nums.length == 0) return 0;
+        int[] dp = new int[nums.length+1];
+        dp[0] = 0;
+        dp[1] = nums[0];
+        for(int i=2;i<dp.length;i++){
+            dp[i] = Math.max(dp[i-1], dp[i-2]+nums[i-1]);
         }
-        return Math.max(prev_prev, prev);
+        return dp[nums.length];
     }
-
 }
