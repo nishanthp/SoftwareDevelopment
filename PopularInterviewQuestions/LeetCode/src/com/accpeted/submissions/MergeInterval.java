@@ -1,5 +1,7 @@
 package com.accpeted.submissions;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
@@ -42,6 +44,37 @@ public class MergeInterval {
         result.add(new Interval(start, end));
         return result;
     }
+	
+	
+	
+
+	// If the input is not an object.
+	public int[][] merge(int[][] intervals) {
+	    if(intervals.length == 0 || intervals[0].length == 0) return new int[0][0];
+	    List<int[]> res = new ArrayList<int[]>();
+	    // look at how it can be sorted. 
+	    Arrays.sort(intervals, new Comparator<int[]>(){
+	        @Override
+	        public int compare(int[] n1, int[] n2){
+	            return Integer.compare(n1[0], n2[0]);
+	        }
+	    });
+	    int start = intervals[0][0];
+	    int end = intervals[0][1];   
+	    for(int i=1;i<intervals.length;i++){
+	        if(intervals[i][0] <= end) {
+	            end = Math.max(end, intervals[i][1]);
+	        } else {
+	            res.add(new int[]{start, end});
+	            start = intervals[i][0];
+	            end = intervals[i][1];
+	        }
+	        
+	    }
+	    res.add(new int[]{start, end});
+	    // below line converts List<int[]> to int[][]
+	    return res.toArray(new int[res.size()][]);
+	}
 
 }
 
@@ -51,3 +84,4 @@ class Interval {
 	      Interval() { start = 0; end = 0; }
 	      Interval(int s, int e) { start = s; end = e; }
 	  }
+
