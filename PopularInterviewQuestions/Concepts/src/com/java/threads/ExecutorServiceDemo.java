@@ -9,17 +9,22 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
+import java.io.Serializable;;
 public class ExecutorServiceDemo {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		Thread_1 t1 = new Thread_1();
 		Thread_1 t2 = new Thread_1();
 		Thread_1 t3 = new Thread_1();
+		
 		/*
 		 * Executors return an executor service with n threads. This internally
 		 * uses a ThreadPoolExecutor, the one shown below.
 		 */
 		ExecutorService executoprService = Executors.newFixedThreadPool(1);
+		// submit() accepts a callable or runnable task.
+		// submit() return type is future object.
+		// execute() ONLY accepts the runnable task.
+		// execute() return type is void.
 		Future<Boolean> ft1 = executoprService.submit(t1);
 		Future<Boolean> ft2 = executoprService.submit(t2);
 		Future<Boolean> ft3 = executoprService.submit(t3);

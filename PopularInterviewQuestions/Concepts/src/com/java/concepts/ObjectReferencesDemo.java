@@ -24,7 +24,6 @@ public class ObjectReferencesDemo {
 			// this is a blocking call.
 			Reference<? extends Object1> removed = referenceQueue.remove();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

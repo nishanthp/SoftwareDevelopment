@@ -33,10 +33,12 @@ public class Conversions {
 		System.out.println(":"+ s);
 		
 		// This is auto boxing.
-		char ch2 = Character.valueOf('1');
+		char ch2 = Character.valueOf('1');		
 		System.out.println(ch2);
 
-		
+		// Values are from 10 to 35.
+		// ASCII has a mapping of 128 chars. 0-127.
+		// Unicode is a superset of ASCII from 0-2^21.
 		int val = Character.getNumericValue('A');
 		System.out.println("val "+val);
 		

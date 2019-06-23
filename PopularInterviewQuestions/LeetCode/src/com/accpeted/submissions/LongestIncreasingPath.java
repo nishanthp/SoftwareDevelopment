@@ -4,7 +4,6 @@ public class LongestIncreasingPath {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-
 	}
 	
 	public int longestIncreasingPath(int[][] matrix) {

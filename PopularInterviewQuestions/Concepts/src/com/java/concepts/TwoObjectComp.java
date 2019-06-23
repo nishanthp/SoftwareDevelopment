@@ -36,8 +36,10 @@ public class TwoObjectComp {
 		
 		// Below are unicode characters(Super set of ascii and ascii extended).
 		// Could come up during string related interview questions.
-		String cross = "\ud800\udc35";
-		String cross2 = "\ud800\udc35";
+		String unicode1 = "\ud684";
+		String unicode2 = "\ud800\udc35";
+		System.out.println(unicode1);
+		System.out.println(unicode2);
 		
 		HashSet<Point> s1 = new HashSet<Point>();
 		s1.add(p1);

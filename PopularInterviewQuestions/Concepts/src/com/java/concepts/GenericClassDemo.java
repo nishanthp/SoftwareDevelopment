@@ -25,6 +25,23 @@ public class GenericClassDemo<T extends Object> {
 		GenericClassDemo<Integer> iClass = new GenericClassDemo<>();
 		System.out.println(iClass.add(10, 23));
 		
+		// Below line is not encouraged. It should be parameterized. 
+		LinkedList ll  = new LinkedList(10, 20, 9);
+		
+		// Below is the right way to use it.
+		LinkedList<Integer, Integer> ll1  = new LinkedList<Integer,Integer>(10, 20, 9);
+		
 	}
 
+}
+
+class LinkedList<k, v> {
+	k key;
+	v value;
+	int x;
+	LinkedList(k key, v value, int i){
+		this.key = key;
+		this.value = value;
+		this.x = i;
+	}
 }

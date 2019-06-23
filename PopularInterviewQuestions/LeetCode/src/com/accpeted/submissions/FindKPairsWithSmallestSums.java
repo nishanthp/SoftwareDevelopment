@@ -14,7 +14,9 @@ public class FindKPairsWithSmallestSums {
 		// Ran on leetcode
 		HashSet<Integer> fner = new HashSet<>();
 		Iterator<Integer> hashIt = fner.iterator();
-
+		while(hashIt.hasNext()) {
+			
+		}
 	}
 	
 	

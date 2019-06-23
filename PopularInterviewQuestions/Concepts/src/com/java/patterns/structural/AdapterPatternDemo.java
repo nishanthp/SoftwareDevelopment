@@ -7,6 +7,16 @@ public class AdapterPatternDemo {
 	}
 }
 
+interface MediaPlayer {
+	void play(String music);
+}
+
+interface AdvancedMediaPlayer {
+	void playVlcPlayer(String music);
+
+	void playMp4Player(String music);
+}
+
 class AudioPlayer implements MediaPlayer {
 	MediaAdapter mediaAdapter;
 	String mediaType;
@@ -27,15 +37,9 @@ class AudioPlayer implements MediaPlayer {
 	}
 }
 
-interface MediaPlayer {
-	void play(String music);
-}
 
-interface AdvancedMediaPlayer {
-	void playVlcPlayer(String music);
 
-	void playMp4Player(String music);
-}
+
 
 class VlcPlayer implements AdvancedMediaPlayer {
 

@@ -45,6 +45,7 @@ public class LocalDateTimeDemo extends Object{
 
 		// to get date and time.
 		Date d = new Date();
+		
 		java.time.LocalDate localDate = d.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 		System.out.println(localDate.getDayOfMonth());
 		System.out.println(localDate.getMonthValue());
@@ -69,6 +70,7 @@ public class LocalDateTimeDemo extends Object{
 
 		java.time.LocalTime t3 = java.time.LocalTime.now();
 		System.out.println("This is min." + t3.getMinute());
+		
 	}
 	
 	

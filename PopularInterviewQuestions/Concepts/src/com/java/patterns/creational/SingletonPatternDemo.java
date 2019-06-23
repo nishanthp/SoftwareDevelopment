@@ -8,7 +8,8 @@ public class SingletonPatternDemo {
 }
 
 class SingletonDemo {
-	static SingletonDemo singletonDemoInstance = null;
+	// This cannot be final.
+	private static SingletonDemo singletonDemoInstance = null;
 
 	private SingletonDemo() {
 	}

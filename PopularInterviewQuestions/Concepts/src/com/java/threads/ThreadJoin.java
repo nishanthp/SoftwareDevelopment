@@ -2,9 +2,9 @@ package com.java.threads;
 
 public class ThreadJoin {
 	public static void main(String[] args) throws InterruptedException {
-		thread6 t1 = new thread6("t1");
-		thread6 t2 = new thread6("t2");
-		thread6 t3 = new thread6("t3");
+		Thread6 t1 = new Thread6("t1");
+		Thread6 t2 = new Thread6("t2");
+		Thread6 t3 = new Thread6("t3");
 		t1.start();
 		t1.join();
 		t2.start();
@@ -12,11 +12,15 @@ public class ThreadJoin {
 		t2.join();
 		t3.start();
 		// t3.join();
+		
+		// Runnable interface does not have run() method implemented. 
+		// Thread class implements Runnable interface.  
 	}
 }
 
-class thread6 extends Thread {
-	public thread6(String name) {
+
+class Thread6 extends Thread {
+	public Thread6(String name) {
 		super(name);
 	}
 

@@ -1,5 +1,7 @@
 package com.java.concepts;
 
+import java.io.Serializable;
+
 public class ClassInner {
 
 	public static void main(String[] args) {
@@ -27,5 +29,6 @@ public class ClassInner {
 	}
 
 }
+
 
 

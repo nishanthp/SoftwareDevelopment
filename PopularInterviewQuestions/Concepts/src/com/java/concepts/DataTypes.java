@@ -23,6 +23,9 @@ public class DataTypes {
 //			System.out.println(entry.getValue());
 //			System.out.println(entry.getKey());
 //		}
+		for(Entry<Integer, Integer> each : entries) {
+			System.out.println(each);
+		}
 		String hbs = "abcd";
 		swapCharsString(hbs.toCharArray(), 0, hbs.length()-1);
 		System.out.println(hbs);
