@@ -13,16 +13,19 @@ public class ObserverPatternDemo {
 
 
 abstract class Observer {
-	// cannot use an interface as the the memeber variables of interface are static and final.
+	// cannot use an interface as the the member variables of interface are static and final.
 	Subject subject;
+	public Observer(Subject sub) {
+		this.subject = sub;
+	}
 
 	public abstract void update();
 }
 
 class Observer1 extends Observer {
-
+	
 	public Observer1(Subject sub) {
-		this.subject = sub;
+		super(sub);
 		this.subject.addToObserverList(this);
 	}
 
@@ -36,6 +39,7 @@ class Observer1 extends Observer {
 class Observer2 extends Observer {
 
 	public Observer2(Subject sub) {
+		super(sub);
 		this.subject = sub;
 		this.subject.addToObserverList(this);
 	}

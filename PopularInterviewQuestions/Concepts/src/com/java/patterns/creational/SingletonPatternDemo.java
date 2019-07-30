@@ -16,7 +16,9 @@ class SingletonDemo {
 
 	public static SingletonDemo getInstance() {
 		if (null == singletonDemoInstance) {
-			singletonDemoInstance = new SingletonDemo();
+			synchronized(SingletonDemo.class) {
+				singletonDemoInstance = new SingletonDemo();
+			}
 		}
 		return singletonDemoInstance;
 	}

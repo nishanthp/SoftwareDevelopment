@@ -6,7 +6,6 @@ public class Trie {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-
 	}
 
 	    TrieNode root = null;

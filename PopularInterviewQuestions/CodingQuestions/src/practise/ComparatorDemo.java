@@ -25,7 +25,7 @@ public class ComparatorDemo {
 	}
 }
 
-class HashMapComparator implements Comparator {
+class HashMapComparator implements Comparator<Integer> {
 
 	HashMap<Integer, Integer> map;
 
@@ -34,9 +34,9 @@ class HashMapComparator implements Comparator {
 	}
 
 	@Override
-	public int compare(Object o1, Object o2) {
-		Comparable v1 = (Comparable) map.get(o1);
-		Comparable v2 = (Comparable) map.get(o2);
+	public int compare(Integer o1, Integer o2) {
+		Integer v1 =  map.get(o1);
+		Integer v2 =  map.get(o2);
 		return v2.compareTo(v1);
 	}
 

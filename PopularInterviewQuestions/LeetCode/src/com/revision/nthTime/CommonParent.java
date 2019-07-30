@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.Queue;
 
 
 public class CommonParent {
@@ -14,8 +15,21 @@ public class CommonParent {
 	static boolean s2Found = false;
 	//static String commonParent = null;
 	public static void main(String[] args) {
-		// Airbnb phone interview.
+		System.out.println(3/2);
+		StringBuffer sb = new StringBuffer();
+		sb.append('1');
+		System.out.println(sb.toString());
 		
+		Queue<Integer> q = new LinkedList<>();
+		q.add(1);
+		q.add(2);
+		q.add(3);
+		q.add(499);
+		for(Integer e : q) {
+			System.out.println(e);
+		}
+		System.out.println("q size " + q.size());
+		// Airbnb phone interview.
 		List<List<String>> lists = new LinkedList<>();
 		lists.add(Arrays.asList("Earth", "USA", "Canada", "Mexico"));
 		lists.add(Arrays.asList("USA", "SJ", "Seattle"));
@@ -30,32 +44,27 @@ public class CommonParent {
 			map.putIfAbsent(list.get(0), temp);	
 		}
 
-		for(Entry<String, List<String>> each : map.entrySet()) {
-			s1Found = false;
-			s2Found = false;
-			System.out.println(findCommonParent(map, each.getKey(), "", "vancover", "vancovereast"));
-		}
-	}
-
-	private static String findCommonParent(HashMap<String, List<String>> map, String index, String parent, String s1, String s2) {
-		List<String> children = map.getOrDefault(index, new ArrayList<String>());
-		System.out.println(children.size());
-		for(String child : children) {
-			System.out.println(index + "   " +child);
-			if(child.equals(s1)) {	
-				System.out.println("here");
-				s1Found = true;
-			}
-			if(child.equals(s2)) 
-				s2Found = true;
-			if(s1Found && s2Found)  {
-				System.out.println(index);
-				return index;
-				}
-			String lowestCommon = findCommonParent(map, child, parent, s1, s2);
-			if (lowestCommon != null) return lowestCommon;
+		String root = null;
+		if(map.entrySet().iterator().hasNext()) {
+			root = map.entrySet().iterator().next().getKey();
 		}
 		
-		return "";
+		System.out.println(findCommonParent(map, root, "USA", "Seattle"));
+	}
+
+	private static String findCommonParent(HashMap<String, List<String>> map, String index, String s1, String s2) {
+		List<String> children = map.getOrDefault(index, new ArrayList<String>());
+		if(index.equals(s1) || index.equals(s2)) return index;
+		String temp  = null;
+		int count = 0;
+		for(String child : children) {
+			String lowestCommon = findCommonParent(map, child, s1, s2);
+			if (lowestCommon != null) {
+				count +=1;
+				temp = lowestCommon;
+			}
+		}
+		if(count == 2) return index;
+		return temp;
 	}	
 }

@@ -1,10 +1,13 @@
 package com.accpeted.submissions;
 
+import java.util.ArrayList;
+
 public class ValidSudoko {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-
+		ArrayList<Integer> nefn = new ArrayList<>();
+		nefn.toString();
 	}
 	
     public boolean isValidSudoku(char[][] board) {
