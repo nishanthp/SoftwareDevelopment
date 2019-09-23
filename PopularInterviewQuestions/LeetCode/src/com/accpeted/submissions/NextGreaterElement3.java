@@ -1,6 +1,5 @@
 package com.accpeted.submissions;
 
-import javafx.util.Pair;
 
 public class NextGreaterElement3 {
 
