@@ -1,6 +1,5 @@
 package com.practice.arrays;
 
-import org.omg.PortableInterceptor.INACTIVE;
 
 // This is the demo.
 public class AtioDemo {

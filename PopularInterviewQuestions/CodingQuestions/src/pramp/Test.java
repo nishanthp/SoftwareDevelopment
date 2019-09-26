@@ -1,11 +1,5 @@
 package pramp;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import javax.xml.bind.DatatypeConverter;
 
 public class Test {
 	public static void main(String[] args) {

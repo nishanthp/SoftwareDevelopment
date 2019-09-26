@@ -1,8 +1,9 @@
 package com.java.concepts;
 
 import java.io.Closeable;
+import java.io.IOException;
 
-import javax.xml.ws.WebServiceException;
+//import javax.xml.ws.WebServiceException;
 
 
 public class CloseableDemo {
@@ -28,8 +29,9 @@ class Learning implements Closeable{
 	}
 
 	@Override
-	public void close() throws WebServiceException {
-		// Used to release the system resources associated with this stream.
+	public void close() throws IOException {
+		// TODO Auto-generated method stub
 		
 	}
+
 }
