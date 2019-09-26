@@ -7,6 +7,7 @@ import java.util.PriorityQueue;
 
 public class NetworkDelay {
 
+	
 	public static void main(String[] args) {
 		// Ran on leetcode.
 
