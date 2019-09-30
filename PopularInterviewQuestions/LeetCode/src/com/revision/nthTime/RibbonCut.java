@@ -22,14 +22,12 @@ public class RibbonCut {
 	// Another way to do combination sum.
 	 public static void countRibbonPieces(int[] ribbonLengths, int index) {
 		 if(temp1.size() == ribbonLengths.length) {
-			 //System.out.println("here");
 			 List<Integer> temp = new ArrayList<>();
 			 temp.addAll(temp1);
 			 res.add(temp);
 			 return;
 		 }
 		 if(index > ribbonLengths.length-1) return;
-		 //System.out.println(index);
 		 temp1.add(ribbonLengths[index]);
 		 countRibbonPieces(ribbonLengths,  index);
 		 temp1.remove(temp1.size()-1);
