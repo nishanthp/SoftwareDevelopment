@@ -14,7 +14,8 @@ public class BTRightSideView {
 		return rightElements;
 	}
 
-	public void printRightView(TreeNode root, int index, ArrayList<Integer> rightElements) {
+	public void printRightView(TreeNode root, int index,
+			ArrayList<Integer> rightElements) {
 		if (root == null)
 			return;
 		if (rightElements.isEmpty() || index > (rightElements.size() - 1)) {
