@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.PriorityQueue;
 
 public class BFSVsAvg {
 
@@ -13,51 +12,50 @@ public class BFSVsAvg {
 		Node root1 = new Node(1);
 		Node root2 = new Node(3);
 		Node root3 = new Node(4);
-		
+
 		root.setChildren(root1);
 		root.setChildren(root2);
 		root.setChildren(root3);
-		
-		bfs(root);
 
+		bfs(root);
+		int i = 0 / 0;
+		System.out.println(i);
 
 	}
 
 	private static void bfs(Node root) {
 		Deque<Node> q = new LinkedList<Node>();
 		q.add(root);
-		while(!q.isEmpty()){
+		while (!q.isEmpty()) {
 			int size = q.size();
 			Node temp = q.remove();
 			int sum = 0;
-			for(Node child : temp.children){				
+			for (Node child : temp.children) {
 				sum += child.val;
 				q.add(child);
-				
-			}		
-			int avg = temp.val/size;
+
+			}
+			int avg = temp.val / size;
 			System.out.println(avg);
 		}
-		
+
 	}
 
 }
 
-
-
 class Node {
 	ArrayList<Node> children;
-	int val; 
-	Node(int val){
+	int val;
+	Node(int val) {
 		children = new ArrayList<>();
 		this.val = val;
 	}
-	void setChildren(Node i){
+	void setChildren(Node i) {
 		children.add(i);
 	}
-	
-	List<Node> getChildren(){
+
+	List<Node> getChildren() {
 		return children;
 	}
-	
+
 }

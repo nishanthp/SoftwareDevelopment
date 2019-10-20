@@ -6,7 +6,6 @@ public class NestedList {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-
 	}
 	
 	
