@@ -1,21 +1,19 @@
 package com.java.threads;
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-import java.io.Serializable;;
+import java.util.concurrent.TimeUnit;;
 public class ExecutorServiceDemo {
-	public static void main(String[] args) throws InterruptedException, ExecutionException {
+	public static void main(String[] args)
+			throws InterruptedException, ExecutionException {
 		Thread_1 t1 = new Thread_1();
 		Thread_1 t2 = new Thread_1();
 		Thread_1 t3 = new Thread_1();
-		
+
 		/*
 		 * Executors return an executor service with n threads. This internally
 		 * uses a ThreadPoolExecutor, the one shown below.
@@ -39,8 +37,8 @@ public class ExecutorServiceDemo {
 
 		System.out.println("Starting executor service 2...");
 		// Another way of creating an executor service.
-		ExecutorService executoprService2 = new ThreadPoolExecutor(2, 2, 10000, TimeUnit.MILLISECONDS,
-				new ArrayBlockingQueue<>(15));
+		ExecutorService executoprService2 = new ThreadPoolExecutor(2, 2, 10000,
+				TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(15));
 		executoprService2.submit(t1);
 		/*
 		 * When we shutdown the executor service after submitting a task and if
@@ -65,22 +63,19 @@ class Thread_1 implements Callable<Boolean> {
 			e.printStackTrace();
 		}
 
-		System.out.println("This thread is done..." + Thread.currentThread().getName());
+		System.out.println(
+				"This thread is done..." + Thread.currentThread().getName());
 		return Boolean.TRUE;
 	}
 }
 
-class Thread_2 implements Runnable{
+class Thread_2 implements Runnable {
 
 	// Cannot throw an exception and cannot return a result.
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 }
-
-
-
-
