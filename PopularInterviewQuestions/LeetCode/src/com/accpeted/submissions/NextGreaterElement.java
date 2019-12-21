@@ -7,7 +7,7 @@ public class NextGreaterElement {
 
 	public static void main(String[] args) {
 		// Not run in leetcode.
-		int[] input = {4, 5, 2, 25};
+		int[] input = {73, 74, 75, 71, 69, 72, 76, 73};
 		for (int i : nextGreaterElememt(input)) {
 			System.out.println(i);
 		}
