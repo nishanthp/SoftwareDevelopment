@@ -8,7 +8,6 @@ public class LongestWordInDict {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-
 	}
 
 	public String longestWord(String[] words) {
