@@ -6,7 +6,6 @@ public class ThreeSumSmaller {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-
 	}
 
 	public int threeSumSmaller(int[] nums, int target) {
