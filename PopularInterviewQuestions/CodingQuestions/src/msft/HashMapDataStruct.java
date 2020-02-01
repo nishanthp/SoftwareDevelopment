@@ -10,7 +10,6 @@ public class HashMapDataStruct {
 		struct.set(3, 6);
 		struct.set(4, 8);
 		// struct.setAll(134);
-
 		System.out.println(struct.get(1));
 	}
 }

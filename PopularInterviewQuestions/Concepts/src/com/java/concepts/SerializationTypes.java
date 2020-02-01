@@ -17,17 +17,16 @@ public class SerializationTypes {
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(bt);
 			out.writeObject(map);
-			out.close(); 
+			out.close();
 			System.out.println(bt.toByteArray());
 			bt.close();
-			
-			
+
 			ObjectOutputStream outObject = new ObjectOutputStream(bt);
 			out.writeObject(mapObject);
-			out.close(); 
+			out.close();
 			System.out.println(bt.toByteArray());
 			bt.close();
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -36,5 +35,5 @@ public class SerializationTypes {
 }
 
 class S3Bucket implements Serializable {
-	
+
 }

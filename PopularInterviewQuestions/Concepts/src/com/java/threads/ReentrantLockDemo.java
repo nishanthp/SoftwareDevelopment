@@ -32,13 +32,14 @@ class ThreadDe extends Thread {
 
 class ObjectDemo {
 	// This is unstructured unlike synchronized block.
-	// Can be used accross methods.
+	// Can be used across methods.
 	ReentrantLock lock = new ReentrantLock(true);
 	int objectValue;
 
 	public int setAndgetValue(int i) throws InterruptedException {
 		lock.lock();
-		System.out.println("QUEUE LENGTH FOR THE LOCK:     " + lock.getQueueLength());
+		System.out.println(
+				"QUEUE LENGTH FOR THE LOCK:     " + lock.getQueueLength());
 		Thread.sleep(2000);
 		objectValue = i;
 		return getValue();

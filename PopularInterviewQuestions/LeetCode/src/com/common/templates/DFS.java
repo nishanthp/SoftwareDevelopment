@@ -31,6 +31,7 @@ public class DFS {
 		for (GraphNode curr_neighbor : startNode.neighbors) {
 			DFSOnGraph(curr_neighbor);
 		}
+		// No in-order for a graph.
 		System.out.println(startNode.val); // post-order
 	}
 

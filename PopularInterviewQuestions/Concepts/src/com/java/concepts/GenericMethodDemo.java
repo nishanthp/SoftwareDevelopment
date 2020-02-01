@@ -2,8 +2,7 @@ package com.java.concepts;
 
 /**
  * 
- * @author prakasni 
- * Usually the convention followed is T or E not a A.
+ * @author prakasni Usually the convention followed is T or E not a A.
  */
 public class GenericMethodDemo {
 	public <A> A printArray(A[] inputArray) {
@@ -16,8 +15,8 @@ public class GenericMethodDemo {
 
 	public static void main(String[] args) {
 
-		Integer i[] = { 1, 2, 3, 4 };
-		String[] data = { "n", "i", "s" };
+		Integer i[] = {1, 2, 3, 4};
+		String[] data = {"o", "m", "g"};
 
 		GenericMethodDemo d = new GenericMethodDemo();
 		d.printArray(i);
