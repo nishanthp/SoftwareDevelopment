@@ -4,7 +4,6 @@ public class PathSum1 {
 
 	public static void main(String[] args) {
 		// Ran on leetcode.
-
 	}
 
 	// Does not require to store the path. No need of the array. use the
@@ -14,7 +13,12 @@ public class PathSum1 {
 			return false;
 		if (root.left == null && root.right == null && sum - root.val == 0)
 			return true;
-		return (hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val));
+		return (hasPathSum(root.left, sum - root.val)
+				|| hasPathSum(root.right, sum - root.val));
+	}
+
+	static Exception nu() {
+		return new Exception();
 	}
 
 }
