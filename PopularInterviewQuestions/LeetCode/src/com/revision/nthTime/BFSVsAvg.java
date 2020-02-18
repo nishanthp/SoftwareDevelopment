@@ -18,9 +18,6 @@ public class BFSVsAvg {
 		root.setChildren(root3);
 
 		bfs(root);
-		int i = 0 / 0;
-		System.out.println(i);
-
 	}
 
 	private static void bfs(Node root) {
