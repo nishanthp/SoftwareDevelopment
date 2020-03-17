@@ -11,6 +11,7 @@ public class ConsumerProducerProblem {
 		Consumer1 cThread = new Consumer1(s);
 		pThread.start();
 		cThread.start();
+
 	}
 
 }
