@@ -12,7 +12,8 @@ public class DFSArray {
 
 	public static void dfs(int[] array) {
 		Set<Integer> set = new HashSet<Integer>();
-		// dfsOneWay(array, 0, set);
+		dfsOneWay(array, 0, set);
+		System.out.println(" ");
 		dfsSecondWay(array, 0, set);
 	}
 
@@ -33,19 +34,20 @@ public class DFSArray {
 	}
 
 	private static void dfsSecondWay(int[] array, int index, Set<Integer> set) {
-		if (index >= array.length - 1) {
+		if (index >= array.length) {
 			Iterator<Integer> iter = set.iterator();
 			while (iter.hasNext()) {
 				System.out.print(iter.next());
 			}
 			System.out.println();
+			return;
 		}
 
 		// for (int i = index; i < array.length; i++) {
 		set.add(array[index]);
-		dfsOneWay(array, index + 1, set);
+		dfsSecondWay(array, index + 1, set);
 		set.remove(array[index]);
-		dfsOneWay(array, index, set);
+		dfsSecondWay(array, index + 1, set);
 		// }
 	}
 

@@ -9,6 +9,7 @@ public class BinarySearch {
 		int[] input = {1, 2, 4, 5};
 		binarySearchIndexBased(input, 0, input.length, 4);
 		binarySearchValueBased(input, 0, input.length, 4);
+		binarySearchTerminate(input, 0, input.length);
 	}
 
 	private static int binarySearchIndexBased(int[] input, int low, int high,
@@ -42,11 +43,10 @@ public class BinarySearch {
 	}
 
 	// Can be used as variant of Random generator.
-	private static int binarySearchTerminate(int[] input, int low, int high,
-			int target) {
+	private static int binarySearchTerminate(int[] input, int low, int high) {
 		while (low < high) {
-			int mid = (input[low] + input[high]) / 2;
-			if (mid < target)
+			int mid = (low + high) / 2;
+			if (input[mid] > input[high])
 				low = mid + 1;
 			else
 				high = mid;
