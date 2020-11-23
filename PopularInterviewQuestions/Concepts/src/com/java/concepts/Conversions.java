@@ -44,6 +44,8 @@ public class Conversions {
 		int val = Character.getNumericValue('A');
 		System.out.println("val " + val);
 
+		char c11 = '0'+ 9;
+		System.out.println(c11);
 	}
 
 }

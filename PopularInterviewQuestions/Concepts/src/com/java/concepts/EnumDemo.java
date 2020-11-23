@@ -10,18 +10,20 @@ public class EnumDemo {
 
 		System.out.println(InstanceEnum.accepted.getUrl());
 		
-//		System.out.println(Operation.PLUS.operation(1,2));
-//		for(Operation op :Operation.values())
-//		{
-//			System.out.println(op);
-//		}
-//		
-//		System.out.println(UserStatus.valueOf("pending"));
+		System.out.println(Operation.PLUS.operation(1,2));
+		for(Operation op :Operation.values())
+		{
+			System.out.println(op);
+		}
+		
+		System.out.println(UserStatus.valueOf("pending"));
 		//Below statement does not work. InstanceEnum.valueOf("pending") gives InstanceEnum.pending not a string.
 		//String p = InstanceEnum.valueOf("pending");
 		
-		System.out.println(Suit.Club.getNumber());
-		System.out.println(Suit.Heart.getStr());
+//		System.out.println(Suit.Club.getNumber());
+//		System.out.println(Suit.Heart.getStr());
+		
+		
 	}
 }
 

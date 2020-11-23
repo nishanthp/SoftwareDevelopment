@@ -49,7 +49,7 @@ public class CommonParent {
 			root = map.entrySet().iterator().next().getKey();
 		}
 		
-		System.out.println(findCommonParent(map, root, "USA", "Seattle"));
+		System.out.println(findCommonParent(map, root, "USA", "mexicocity2"));
 	}
 
 	private static String findCommonParent(HashMap<String, List<String>> map, String index, String s1, String s2) {
